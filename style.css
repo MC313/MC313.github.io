@@ -517,8 +517,7 @@ a.open-overlay:hover {
   }
 
   #about-details {
-    font-size: 165%;
-    width: 80%;
+    font-size: 150%;
   }
 
   .close {
@@ -556,25 +555,18 @@ a.open-overlay:hover {
 }
 
 @media only screen and (max-width: 650px) {
+  a.open-overlay {
+    font-size: 800%;
+  }
+
   #line-2 {
     left: 78%;
     top: 81%;
   }
 
-  #about-details {
-    font-size: 150%;
-  }
-
-  a.open-overlay {
-    font-size: 800%;
-  }
-}
-
-@media only screen and (max-width: 560px) {
-  #line-2 {
-    left: 71%;
-    top: 78%;
-  }
+  /*#about-details {
+    font-size: 130%;
+  }*/
 
   .social-icon {
     width: 55px;
@@ -584,6 +576,24 @@ a.open-overlay:hover {
   #contact-email {
     font-size: 130%;
   }
+  
+}
+
+@media only screen and (max-width: 560px) {
+  #line-2 {
+    left: 71%;
+    top: 78%;
+  }
+
+  .social-icon {
+    height: 45px;
+    width: 45px;
+  }
+
+  #contact-email {
+    font-size: 110%;
+  }
+
 
 @media only screen and (max-width: 450px) {
   #line-2 {
@@ -607,10 +617,13 @@ a.open-overlay:hover {
   #about-details {
     font-size: 112%;
   }
-
+  
   .skill-item {
+    height: 65%;
     font-size: 85%;
   }
+
+
 
   
 
