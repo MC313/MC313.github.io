@@ -458,11 +458,6 @@ a.open-overlay:hover {
   #line-2 {
     left: 65%;
   }
-
-  #about-overlay {
-    font-size: 
-  }
-
 }
 
 @media only screen and (max-width: 1000px) {
@@ -522,7 +517,6 @@ a.open-overlay:hover {
 
   .close {
     font-size: 500%;
-    height: 12%;
   }
 
   .skill-item {
@@ -610,16 +604,12 @@ a.open-overlay:hover {
     padding-right: 5%;
   }
 
-  #about-overlay > a.close {
-    height: 15%;
-  }
-
   #about-details {
     font-size: 95%;
   }
   
   .skill-item {
-    height: 65%;
+    height: 85%;
     font-size: 85%;
   }
 
