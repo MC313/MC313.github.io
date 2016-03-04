@@ -49,9 +49,10 @@ body {
 #click-here {
   padding-top: 15%;
   padding-left: 15%;
-  -moz-animation: animation: clickHere 3.5s infinite;
-  -webkit-animation: animation: clickHere 3.5s infinite;
-  animation: clickHere 3.5s infinite;
+  -moz-animation: animation: clickHere 3.5s ;infinite;
+  -webkit-animation: animation: clickHere 3.5s ;infinite;
+  -webkit-animation: clickHere 3.5s infinite;
+          animation: clickHere 3.5s infinite;
 }
 
 @-webkit-keyframes clickHere {
@@ -79,9 +80,10 @@ body {
   right: 4%;
   bottom: 6%;
   z-index: 10;
-  -moz-animation: animation: reduceSplash 3.5s infinite;
-  -webkit-animation: animation: reduceSplash 3.5s infinite;
-  animation: reduceSplash 3.5s infinite;
+  -moz-animation: animation: reduceSplash 3.5s ;infinite;
+  -webkit-animation: animation: reduceSplash 3.5s ;infinite;
+  -webkit-animation: reduceSplash 3.5s infinite;
+          animation: reduceSplash 3.5s infinite;
 }
 
 @-webkit-reduceSplash {
@@ -92,13 +94,22 @@ body {
     100% {-webkit-transform: translate(4%, 6%); border-color: #16a085;}
 }
 
+@-webkit-keyframes reduceSplash {
+
+    0%   {-webkit-transform: translate(4%, 6%);transform: translate(4%, 6%); border-color: #16a085;}
+    25%  {-webkit-transform: translate(26%, 30%);transform: translate(26%, 30%); border-color: #e74c3c;}
+    50%  {-webkit-transform: translate(4%, 6%);transform: translate(4%, 6%); border-color: #16a085;}
+    75%  {-webkit-transform: translate(26%, 30%);transform: translate(26%, 30%); border-color: #e74c3c;}
+    100% {-webkit-transform: translate(4%, 6%);transform: translate(4%, 6%); border-color: #16a085;}
+}
+
 @keyframes reduceSplash {
 
-    0%   {transform: translate(4%, 6%); border-color: #16a085;}
-    25%  {transform: translate(26%, 30%); border-color: #e74c3c;}
-    50%  {transform: translate(4%, 6%); border-color: #16a085;}
-    75%  {transform: translate(26%, 30%); border-color: #e74c3c;}
-    100% {transform: translate(4%, 6%); border-color: #16a085;}
+    0%   {-webkit-transform: translate(4%, 6%);transform: translate(4%, 6%); border-color: #16a085;}
+    25%  {-webkit-transform: translate(26%, 30%);transform: translate(26%, 30%); border-color: #e74c3c;}
+    50%  {-webkit-transform: translate(4%, 6%);transform: translate(4%, 6%); border-color: #16a085;}
+    75%  {-webkit-transform: translate(26%, 30%);transform: translate(26%, 30%); border-color: #e74c3c;}
+    100% {-webkit-transform: translate(4%, 6%);transform: translate(4%, 6%); border-color: #16a085;}
 }
 
 #line-1:hover {
@@ -115,9 +126,10 @@ body {
   left: 78%;
   top: 72%;
   z-index: 0;
-  -moz-animation: animation: expandSplash 3.5s infinite;
-  -webkit-animation: animation: expandSplash 3.5s infinite;
-  animation: expandSplash 3.5s infinite;
+  -moz-animation: animation: expandSplash 3.5s ;infinite;
+  -webkit-animation: animation: expandSplash 3.5s ;infinite;
+  -webkit-animation: expandSplash 3.5s infinite;
+          animation: expandSplash 3.5s infinite;
 }
 
 @-webkit-expandSplash {
@@ -128,21 +140,31 @@ body {
     100% {-webkit-transform: translate(51%, 46%); border-color: #16a085;}
 }
 
+@-webkit-keyframes expandSplash {
+
+    0%   {-webkit-transform: translate(51%, 46%);transform: translate(51%, 46%); border-color: #16a085;}
+    25%  {-webkit-transform: translate(115%, 75%);transform: translate(115%, 75%); border-color: #e74c3c;}
+    50%  {-webkit-transform: translate(51%, 46%);transform: translate(51%, 46%); border-color: #16a085;}
+    75%  {-webkit-transform: translate(115%, 75%);transform: translate(115%, 75%); border-color: #e74c3c;}
+    100% {-webkit-transform: translate(51%, 46%);transform: translate(51%, 46%); border-color: #16a085;}
+}
+
 @keyframes expandSplash {
 
-    0%   {transform: translate(51%, 46%); border-color: #16a085;}
-    25%  {transform: translate(115%, 75%); border-color: #e74c3c;}
-    50%  {transform: translate(51%, 46%); border-color: #16a085;}
-    75%  {transform: translate(115%, 75%); border-color: #e74c3c;}
-    100% {transform: translate(51%, 46%); border-color: #16a085;}
+    0%   {-webkit-transform: translate(51%, 46%);transform: translate(51%, 46%); border-color: #16a085;}
+    25%  {-webkit-transform: translate(115%, 75%);transform: translate(115%, 75%); border-color: #e74c3c;}
+    50%  {-webkit-transform: translate(51%, 46%);transform: translate(51%, 46%); border-color: #16a085;}
+    75%  {-webkit-transform: translate(115%, 75%);transform: translate(115%, 75%); border-color: #e74c3c;}
+    100% {-webkit-transform: translate(51%, 46%);transform: translate(51%, 46%); border-color: #16a085;}
 }
 
 #expand {
   padding-top: 15%;
   padding-right: 15%;
-  -moz-animation: animation: expand 3.5s infinite;
-  -webkit-animation: animation: expand 3.5s infinite;
-  animation: expand 3.5s infinite;
+  -moz-animation: animation: expand 3.5s ;infinite;
+  -webkit-animation: animation: expand 3.5s ;infinite;
+  -webkit-animation: expand 3.5s infinite;
+          animation: expand 3.5s infinite;
 }
 
 @-webkit-keyframes expand {
@@ -269,9 +291,9 @@ flex container that holds skills and contact sections of site*/
 }
 
 .skill-item div {
-  -webkit-align-self: center;
   -ms-flex-item-align: center;
-  align-self: center;
+  -webkit-align-self: center;
+          align-self: center;
   position: absolute;
   overflow: hidden;
   height: 100%;
@@ -329,6 +351,11 @@ flex container that holds skills and contact sections of site*/
 .social-icon {
   width: 60px;
   height: 60px;
+  opacity: 0.8;
+}
+
+.social-icon:hover {
+  opacity: 1;
 }
 
 #contact-email {
@@ -336,9 +363,9 @@ flex container that holds skills and contact sections of site*/
 }
 
 #contact-details, #contact-email {
-  -webkit-align-self: center;
   -ms-flex-item-align: center;
-  align-self: center;
+  -webkit-align-self: center;
+          align-self: center;
 }
 
 #contact-overlay a.close, #contact-details {
@@ -346,9 +373,9 @@ flex container that holds skills and contact sections of site*/
 }
 
 #cover, #about, #skills, #contact {
-  -webkit-flex-basis: 100%;
   -ms-flex-preferred-size: 100%;
-  flex-basis: 100%;
+  -webkit-flex-basis: 100%;
+          flex-basis: 100%;
 }
 
 .close, a.open-overlay {
@@ -373,7 +400,9 @@ a.open-overlay:hover {
   height: 20%;
   padding-right: 25px;
   font-size: 480%;
-  align-self: flex-end;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
 }
 
 #about-overlay, #contact-overlay, #skills-overlay {
@@ -389,7 +418,6 @@ a.open-overlay:hover {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  background-color: #000;
   left: 0;
   top: 0;
   right: 0;
@@ -493,9 +521,9 @@ a.open-overlay:hover {
   
   #container-1, #container-2, 
   #container-3, #container-4 {
-    -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
+    -webkit-flex-basis: 100%;
+            flex-basis: 100%;
   }
 
   #line-2 {
@@ -520,7 +548,9 @@ a.open-overlay:hover {
   }
 
   .skill-item {
-    flex: 1 1 100%;
+    -webkit-flex: 1 1 100%;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
     font-size: 120%;
     height: 45%;
     margin: 0;
@@ -619,3 +649,4 @@ a.open-overlay:hover {
 
 
 
+}}
