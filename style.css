@@ -288,6 +288,7 @@ flex container that holds skills and contact sections of site*/
 
 .skill-name {
   font-size: 145%;
+  text-align: left;
 }
 
 .skill-item div {
@@ -347,6 +348,10 @@ flex container that holds skills and contact sections of site*/
   flex-direction: column;
 }
 
+#contact-icons {
+  text-align: center;
+}
+
 .social-icon {
   width: 60px;
   height: 60px;
@@ -355,16 +360,6 @@ flex container that holds skills and contact sections of site*/
 
 .social-icon:hover {
   opacity: 1;
-}
-
-#contact-email {
-  font-size: 125%;
-}
-
-#contact-details, #contact-email {
-  -ms-flex-item-align: center;
-  -webkit-align-self: center;
-          align-self: center;
 }
 
 #contact-overlay a.close, #contact-details {
