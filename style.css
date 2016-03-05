@@ -49,8 +49,7 @@ body {
 #click-here {
   padding-top: 15%;
   padding-left: 15%;
-  -moz-animation: animation: clickHere 3.5s ;infinite;
-  -webkit-animation: animation: clickHere 3.5s ;infinite;
+  -moz-animation: clickHere 3.5s infinite;
   -webkit-animation: clickHere 3.5s infinite;
           animation: clickHere 3.5s infinite;
 }
@@ -80,8 +79,7 @@ body {
   right: 4%;
   bottom: 6%;
   z-index: 10;
-  -moz-animation: animation: reduceSplash 3.5s ;infinite;
-  -webkit-animation: animation: reduceSplash 3.5s ;infinite;
+  -moz-animation: reduceSplash 3.5s infinite;
   -webkit-animation: reduceSplash 3.5s infinite;
           animation: reduceSplash 3.5s infinite;
 }
@@ -126,8 +124,8 @@ body {
   left: 78%;
   top: 72%;
   z-index: 0;
-  -moz-animation: animation: expandSplash 3.5s ;infinite;
-  -webkit-animation: animation: expandSplash 3.5s ;infinite;
+  -moz-animation: expandSplash 3.5s infinite;
+  -webkit-animation: expandSplash 3.5s infinite;
   -webkit-animation: expandSplash 3.5s infinite;
           animation: expandSplash 3.5s infinite;
 }
@@ -273,9 +271,9 @@ flex container that holds skills and contact sections of site*/
 }
 
 .skill-item {
-  -webkit-flex: 1 1 50%;
-  -ms-flex: 1 1 50%;
-  flex: 1 1 50%;
+  -webkit-flex: 1 1 30%;
+  -ms-flex: 1 1 30%;
+  flex: 1 1 30%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -283,8 +281,10 @@ flex container that holds skills and contact sections of site*/
   -ms-flex-direction: column;
   flex-direction: column;
   position: relative;
-  margin-bottom: 55px;
+  padding: 0em 3%;
+  padding-bottom: 3%;
 }
+
 
 .skill-name {
   font-size: 145%;
@@ -294,15 +294,14 @@ flex container that holds skills and contact sections of site*/
   -ms-flex-item-align: center;
   -webkit-align-self: center;
           align-self: center;
-  position: absolute;
   overflow: hidden;
-  height: 100%;
-  width: 85%;
+  height: 35%;
+  width: 100%;
   background: #cccccc;
 }
 
 .skill-item div > span {
-  position: absolute;
+  display: block;
   height: 100%;
   background: #e74c3c;
 }
@@ -351,7 +350,7 @@ flex container that holds skills and contact sections of site*/
 .social-icon {
   width: 60px;
   height: 60px;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .social-icon:hover {
@@ -397,7 +396,7 @@ a.open-overlay:hover {
 
 /*properties for X that closes detail overlay*/
 .close {
-  height: 20%;
+  height: 15%;
   padding-right: 25px;
   font-size: 480%;
   -webkit-align-self: flex-end;
@@ -552,7 +551,6 @@ a.open-overlay:hover {
         -ms-flex: 1 1 100%;
             flex: 1 1 100%;
     font-size: 120%;
-    height: 45%;
     margin: 0;
   }
 
@@ -561,7 +559,7 @@ a.open-overlay:hover {
   }
 
   .skill-item div {
-    height: 30%;
+    height: 25%;
   }
 
   #contact-icons {
@@ -642,11 +640,6 @@ a.open-overlay:hover {
     height: 85%;
     font-size: 85%;
   }
+}
 
-
-
-  
-
-
-
-}}
+}
