@@ -213,6 +213,10 @@ body {
   background-size: cover;
 }
 
+#cover #cover-text {
+  display: none;
+}
+
 #cover #arrow-down {
   display: none;
 }
@@ -285,12 +289,12 @@ flex container that holds skills and contact sections of site*/
   -webkit-flex: 1 1 50%;
   -ms-flex: 1 1 50%;
   flex: 1 1 50%;
-  display: -webkit-flex;
+  /*display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
-  flex-direction: column;
+  flex-direction: column;*/
   position: relative;
   margin-bottom: 55px;
 }
@@ -300,9 +304,6 @@ flex container that holds skills and contact sections of site*/
 }
 
 .skill-item div {
-  -ms-flex-item-align: center;
-  -webkit-align-self: center;
-          align-self: center;
   position: absolute;
   overflow: hidden;
   height: 100%;
@@ -527,7 +528,8 @@ a.open-overlay:hover {
     justify-content: center;
   }
 
-  #cover #cover-text {
+
+  #cover > #cover-text {
     display: block;
     color: #fff;
     font-size: 400%;
@@ -568,20 +570,29 @@ a.open-overlay:hover {
     font-size: 150%;
   }
 
+  #contact-details {
+    width: 80%;
+  }
+
   .close {
     font-size: 500%;
   }
 
   .skill-item {
     -webkit-flex: 1 1 100%;
-        -ms-flex: 1 1 100%;
-            flex: 1 1 100%;
+      -ms-flex: 1 1 100%;
+        flex: 1 1 100%;
     font-size: 120%;
     margin: 0;
+    margin-bottom: 45px;
   }
 
   .skill-name {
     font-size: 120%;
+  }
+
+  .skill-item div {
+    height: 80%;
   }
 
   #contact-icons {
