@@ -221,6 +221,10 @@ body {
   display: none;
 }
 
+#cover > #cover-text {
+  display: none;
+}
+
 
 #cover, #about, #skills, #contact {
   position: relative;
@@ -524,6 +528,7 @@ a.open-overlay:hover {
     justify-content: center;
   }
 
+
   #cover > #cover-text {
     display: block;
     color: #fff;
@@ -643,13 +648,21 @@ a.open-overlay:hover {
   #contact-email {
     font-size: 110%;
   }
-
+}
 
 @media only screen and (max-width: 450px) {
-  #line-2 {
+  #cover #cover-text {
+    display: block;
+    color: #fff;
+    font-size: 400%;
+    padding: 50px;
+    text-align: center;
+  }
+
+  /*#line-2 {
     left: 60%;
     top: 78%;
-  }
+  }*/
 
   a.open-overlay {
     font-size: 400%;
@@ -666,8 +679,6 @@ a.open-overlay:hover {
   
   .skill-item {
     height: 85%;
-    font-size: 85%;
   }
 }
 
-}
