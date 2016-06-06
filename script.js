@@ -20,8 +20,14 @@
     var coverHeight = $("#container-1").outerHeight();
 
     //get width and height of splash screen before resizing
-    var splashWidth = $("#splash-container").outerWidth();
-    var splashHeight = $("#splash-container").outerHeight();
+    // var splashWidth = $("#splash-container").outerWidth();
+    // var splashHeight = $("#splash-container").outerHeight();
+
+    //clicking X icon slides cover page up to reveal details page
+    $("#hideCoverPage").click(function(){
+        console.log("running function .....");
+        $("#splash-container").animate({ height: "0px"})
+    });
 
     //mouse over function for first arrow icon
     $("#line-1").click(function() {
