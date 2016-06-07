@@ -11,6 +11,118 @@ body {
   overflow: hidden;
 }
 
+/*====== Shared Styles ========*/
+
+.flex-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#content-container {
+  -webkit-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+#cover, #about, #skills, #contact {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /*-ms-flex-preferred-size: 100%;
+  -webkit-flex-basis: 100%;
+          flex-basis: 100%;*/
+}
+
+#container-1, #container-2, 
+#container-3, #container-4 {
+    -ms-flex-preferred-size: 2000em;
+    -webkit-flex-basis: 2000em;
+            flex-basis: 2000em;
+}
+
+/*container title*/
+a.open-overlay {
+  margin: 0 auto;
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 650%;
+  border-bottom: 5px solid transparent;
+}
+
+a.open-overlay:hover {
+  border-bottom: 5px solid #fff;
+}
+
+#about-overlay, #contact-overlay, #skills-overlay {
+  background: #fff;
+}
+
+/*displayed when section title is clicked*/
+.overlay {
+  position: absolute;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -3;
+}
+
+.overlay:target {
+  opacity: 1;
+  z-index: 1;
+}
+
+/*Attributes for X that closes detail overlay*/
+.close {
+  height: 15%;
+  padding-right: 25px;
+  font-size: 480%;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+}
+
+.close, a.open-overlay {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/*content inside container presented when section title is clicked*/
+.details {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 82%;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+/*===== End of Shared Styles =====*/
+
+
+
+
+/*===== Attributes for Elements on Primary Page =====*/
+
 #splash-container {
   width: 100%;
   height: 100%;
@@ -20,6 +132,7 @@ body {
   z-index: 5;
 }
 
+/***** Stlye for Text on Primary Page *****/
 #text-container {
   position: absolute;
   width: auto;
@@ -41,6 +154,7 @@ body {
   font-weight: 300;
 }
 
+/***** Styles for 'Click Here' Animation *****/
 #click-here, #expand {
   font-size: 80%;
   color: #e74c3c;
@@ -115,6 +229,13 @@ body {
   cursor: hand;
 }
 
+
+
+
+/*===== Styles for Attributes on Secondary Page =====*/
+
+
+/***** Styles for 'Click Here' Animation *****/
 #line-2 {
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff;
@@ -186,24 +307,14 @@ body {
   cursor: hand;
 }
 
-.flex-container {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
 
-#content-container {
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-  width: 100%;
-  height: 100%;
-}
+/***** Styles for Elements within first container with image *****/
+
 
 #container-1 {
-  -webkit-flex: 1 2 40%;
-  -ms-flex: 1 2 40%;
-  flex: 1 2 40%;
+  /*-webkit-flex: 100%;
+  -ms-flex: 100%;
+  flex: 100%;*/
 }
 
 #cover {
@@ -226,21 +337,14 @@ body {
 }
 
 
-#cover, #about, #skills, #contact {
-  position: relative;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
 
-/*flex item of content container*/
+
+/***** Styles for Elements within 'About' container *****/
+
 #container-2 {
-  -webkit-flex: 4 2 60%;
-  -ms-flex: 4 2 60%;
-  flex: 4 2 60%;
+  /*-webkit-flex: 100%;
+  -ms-flex: 100%;
+  flex: 100%;*/
 }
 
 #about {
@@ -260,12 +364,13 @@ body {
   text-align: center;
 }
 
-/*flex item of content container and
-flex container that holds skills and contact sections of site*/
+
+/***** Styles for Attributes within 'Skills' container *****/
+
 #container-3 {
-  -webkit-flex: 4 0 60%;  
-  -ms-flex: 4 0 60%;  
-  flex: 4 0 60%;
+  /*-webkit-flex: 100%;  
+  -ms-flex: 100%;  
+  flex: 100%;*/
 }
 
 #skills {
@@ -286,17 +391,12 @@ flex container that holds skills and contact sections of site*/
 }
 
 .skill-item {
-  -webkit-flex: 1 1 50%;
-  -ms-flex: 1 1 50%;
-  flex: 1 1 50%;
-  /*display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;*/
+  -webkit-flex: 100%;
+  -ms-flex: 100%;
+  flex: 100%;
   position: relative;
   margin-bottom: 55px;
+  width: 75%;
 }
 
 .skill-name {
@@ -307,7 +407,7 @@ flex container that holds skills and contact sections of site*/
   position: absolute;
   overflow: hidden;
   height: 100%;
-  width: 85%;
+  width: 100%;
   background: #cccccc;
 }
 
@@ -341,10 +441,13 @@ flex container that holds skills and contact sections of site*/
   width: 63%;
 }
 
+
+/***** Styles for Elements within 'Contact' container *****/
+
 #container-4 {
-  -webkit-flex: 1 0 40%;
-  -ms-flex: 1 0 40%;
-  flex: 1 0 40%;
+  /*-webkit-flex: 100%;
+  -ms-flex: 100%;
+  flex: 100%;*/
   background-color: #3498db;
 }
 
@@ -360,6 +463,12 @@ flex container that holds skills and contact sections of site*/
 
 #contact-icons {
   text-align: center;
+  flex-direction: column;
+
+}
+
+#contact-icons a {
+  display: flex;
 }
 
 .social-icon {
@@ -376,80 +485,11 @@ flex container that holds skills and contact sections of site*/
   color: #3498db;
 }
 
-#cover, #about, #skills, #contact {
-  -ms-flex-preferred-size: 100%;
-  -webkit-flex-basis: 100%;
-          flex-basis: 100%;
-}
-
-.close, a.open-overlay {
-  color: #fff;
-  text-decoration: none;
-}
-
-/*section title*/
-a.open-overlay {
-  margin: 0 auto;
-  font-family: 'Maven Pro', sans-serif;
-  font-size: 650%;
-  border-bottom: 5px solid transparent;
-}
-
-a.open-overlay:hover {
-  border-bottom: 5px solid #fff;
-}
-
-/*properties for X that closes detail overlay*/
-.close {
-  height: 15%;
-  padding-right: 25px;
-  font-size: 480%;
-  -webkit-align-self: flex-end;
-      -ms-flex-item-align: end;
-          align-self: flex-end;
-}
-
-#about-overlay, #contact-overlay, #skills-overlay {
-  background: #fff;
-}
-
-/*displayed when section title is clicked*/
-.overlay {
-  position: absolute;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  z-index: -3;
-}
 
 
-.overlay:target {
-  opacity: 1;
-  z-index: 1;
-}
 
-/*text or icons inside overlay presented when section title is clicked*/
-.details {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 82%;
-  margin: 0 auto;
-  line-height: 1.4;
-}
 
-@media only screen and (max-width: 1400px) and (max-height: 750px) {
+/*@media only screen and (max-width: 1400px) and (max-height: 750px) {
   #line-2 {
     left: 75%;
     top: 65%;
@@ -504,9 +544,9 @@ a.open-overlay:hover {
   .flex-item {
     padding: 15px 0px;
   }
-}
+}*/
 
-@media only screen and (max-width: 860px) {
+/*@media only screen and (max-width: 860px) {
   #content-container {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
@@ -619,9 +659,9 @@ a.open-overlay:hover {
     top: 81%;
   }
 
-  /*#about-details {
+  #about-details {
     font-size: 130%;
-  }*/
+  }
 
   .social-icon {
     width: 55px;
@@ -659,10 +699,10 @@ a.open-overlay:hover {
     text-align: center;
   }
 
-  /*#line-2 {
+  #line-2 {
     left: 60%;
     top: 78%;
-  }*/
+  }
 
   a.open-overlay {
     font-size: 400%;
@@ -682,3 +722,4 @@ a.open-overlay:hover {
   }
 }
 
+*/
