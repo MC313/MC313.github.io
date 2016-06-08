@@ -203,6 +203,31 @@ a.open-overlay:hover {
     100% {color: #16a085;}
 }
 
+#line-1-mobile {
+  border-left: 2px solid #fff;
+  border-top: 2px solid #fff;
+  width: 70px;
+  height: 60px;
+  position: absolute;
+  text-align: center;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.material-icons {
+  font-size: 36px;
+}
+
+.arrow-upward {
+  color: #fff;
+  padding-top: 0.3em;
+}
+
+#line-1 {
+  display: none;
+}
+
 #line-1 {
   border-left: 2px solid #fff;
   border-top: 2px solid #fff;
@@ -255,6 +280,10 @@ a.open-overlay:hover {
 
 
 /***** Styles for 'Click Here' Animation *****/
+#line-2 {
+  display: none;
+}
+
 #line-2 {
   border-right: 2px solid #fff;
   border-bottom: 2px solid #fff;
@@ -380,7 +409,9 @@ a.open-overlay:hover {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   font-size: 120%;
   color: #1abc9c;
   text-align: center;
