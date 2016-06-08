@@ -37,18 +37,37 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  /*-ms-flex-preferred-size: 100%;
+  width: 100%;
+  -ms-flex-preferred-size: 100%;
   -webkit-flex-basis: 100%;
-          flex-basis: 100%;*/
+          flex-basis: 100em;
 }
 
 #container-1, #container-2, 
 #container-3, #container-4 {
-    -ms-flex-preferred-size: 2000em;
-    -webkit-flex-basis: 2000em;
-            flex-basis: 2000em;
+  /*-webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;*/
+  -ms-flex-preferred-size: 100%;
+  -webkit-flex-basis: 100%;
+          flex-basis: 100%;
 }
 
+#container-1, #container-2 {
+  flex: none;
+}
+
+#container-2 {
+  height: 40em;
+}
+
+#container-3 {
+  flex: 1 0 100%;
+}
+
+#container-4 {
+  flex: 1 0 100%;
+}
 /*container title*/
 a.open-overlay {
   margin: 0 auto;
@@ -89,8 +108,8 @@ a.open-overlay:hover {
 
 /*Attributes for X that closes detail overlay*/
 .close {
-  height: 15%;
-  padding-right: 25px;
+  color: #1abc9c;
+  padding-right: 0.2em;
   font-size: 480%;
   -webkit-align-self: flex-end;
       -ms-flex-item-align: end;
@@ -228,11 +247,11 @@ a.open-overlay:hover {
   cursor: pointer;
   cursor: hand;
 }
+/*===== End of Styles for Elements on Primary Page =====*/
 
 
 
-
-/*===== Styles for Attributes on Secondary Page =====*/
+/*===== Styles for Elements on Secondary Page =====*/
 
 
 /***** Styles for 'Click Here' Animation *****/
@@ -352,6 +371,8 @@ a.open-overlay:hover {
 }
 
 #about-overlay a.close {
+  position: absolute;
+  right: 0;
   color: #1abc9c;
 }
 
@@ -359,9 +380,16 @@ a.open-overlay:hover {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+
   font-size: 120%;
   color: #1abc9c;
   text-align: center;
+  height: 100%;
+  width: 65%;
+}
+
+#about-details article {
+  padding: 2em;
 }
 
 
@@ -391,12 +419,9 @@ a.open-overlay:hover {
 }
 
 .skill-item {
-  -webkit-flex: 100%;
-  -ms-flex: 100%;
-  flex: 100%;
   position: relative;
   margin-bottom: 55px;
-  width: 75%;
+  width: 55%;
 }
 
 .skill-name {
@@ -452,7 +477,7 @@ a.open-overlay:hover {
 }
 
 #contact-overlay > a.close {
-    height: 40%;
+    height: 25%;
 }
 
 #contact-details {
@@ -469,7 +494,12 @@ a.open-overlay:hover {
 
 #contact-icons a {
   display: flex;
+  padding: 0.85em;
 }
+
+/*#contact-icons a:last-of-type {
+    padding-bottom: 35em;
+}*/
 
 .social-icon {
   width: 60px;
@@ -484,6 +514,7 @@ a.open-overlay:hover {
 #contact-overlay a.close, #contact-details {
   color: #3498db;
 }
+
 
 
 
