@@ -45,9 +45,6 @@ body {
 
 #container-1, #container-2, 
 #container-3, #container-4 {
-  /*-webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;*/
   -ms-flex-preferred-size: 100%;
   -webkit-flex-basis: 100%;
           flex-basis: 100%;
@@ -366,10 +363,11 @@ a.open-overlay:hover {
 }
 
 #cover {
-  background-image: url(assets/MyHeadshot.JPG);
+    background: url(assets/MyHeadshot.JPG) no-repeat center center;
+  /*background-image: url(assets/MyHeadshot.JPG) no-repeat center center;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover;*/
 }
 
 #cover #cover-text {
@@ -388,12 +386,6 @@ a.open-overlay:hover {
 
 
 /***** Styles for Elements within 'About' container *****/
-
-#container-2 {
-  /*-webkit-flex: 100%;
-  -ms-flex: 100%;
-  flex: 100%;*/
-}
 
 #about {
   background: #1abc9c;
@@ -425,12 +417,6 @@ a.open-overlay:hover {
 
 
 /***** Styles for Attributes within 'Skills' container *****/
-
-#container-3 {
-  /*-webkit-flex: 100%;  
-  -ms-flex: 100%;  
-  flex: 100%;*/
-}
 
 #skills {
   background: #e74c3c;
@@ -501,9 +487,6 @@ a.open-overlay:hover {
 /***** Styles for Elements within 'Contact' container *****/
 
 #container-4 {
-  /*-webkit-flex: 100%;
-  -ms-flex: 100%;
-  flex: 100%;*/
   background-color: #3498db;
 }
 
@@ -559,15 +542,11 @@ a.open-overlay:hover {
 
   }
 
-  #container-1, #container-2 {
+  /*#container-1, #container-2 {
     -webkit-flex: 100%;
     -ms-flex: 100%;
     flex: 100%;
-  }
-
-  #container-3, #container-4 {
-    flex: inherit;
-  }
+  }*/
 
   #container-1 {
     -webkit-flex: 1 2 40%;
@@ -579,6 +558,7 @@ a.open-overlay:hover {
     -webkit-flex: 4 2 60%;
     -ms-flex: 4 2 60%;
     flex: 4 2 60%;
+    height: initial;
   }
 
   #container-3 {
@@ -591,7 +571,28 @@ a.open-overlay:hover {
     -webkit-flex: 1 0 40%;
     -ms-flex: 1 0 40%;
     flex: 1 0 40%;
-}
+  }
+
+  #cover, #about, #skills, #contact {
+    position: relative;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .skill-item {
+      width: 40%;
+      margin-left: 5%;
+      margin-right: 5%;
+  }
+
+  #contact-icons {
+      flex-direction: row;
+  }
+
 
 
 
