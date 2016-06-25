@@ -12,29 +12,28 @@ $(function(){
 
 
     //function for clicking up arrow on mobile to reveal details page
-    $("#line-1-mobile").click(function() {
-        console.log("mobile function working");
-     $("#text-container").fadeOut().hide();
-     toggleHeight("#splash-container");
-        $("#splash-container").css({background: "#000"});
-        $(".arrow-upward").animate({transform: "rotate(180deg)", "padding-top": "0px"});
-    });
-
-    //function to toggle height of "#splash-container" in mobile view
-
     var maxHeight = $("#splash-container").height();
-    
-    var toggleHeight = function(value) {
-
-        if($(value).height() >= maxHeight ) {
-            console.log("reducing height!");
-            $(value).animate({ height: "20%" });
-            console.log(maxHeight);
+    $("#line-1-mobile").click(function() {
+        //function to toggle height of "#splash-container" in mobile view
+        if($("#splash-container").height() >= maxHeight ) {
+            $("#splash-container").animate({height: "20%"});
+            $("#text-container").fadeOut().hide();
+            $("#splash-container").css({background: "#000"});
+            $(".arrow-upward").css({
+                transform: "rotate(180deg)",
+                transition: "transform 0.7s",
+                "padding-top": "0px"
+            });
         }else{
-            console.log("increasing height!");
-            $(value).animate({ height: "100%" });
+            $("#splash-container").animate({ height: "100%" });
+            $("#text-container").fadeIn().show();
+            $("#splash-container").css({background: ""});
+            $(".arrow-upward").css({
+                transform: "rotate(0deg)",
+                "padding-top": ""
+            });
         }
-    };
+    });
 
 
     //mouse over function for first arrow icon
