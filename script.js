@@ -13,25 +13,24 @@ $(function(){
 
     //function for clicking up arrow on mobile to reveal details page
     var maxHeight = $("#splash-container").height();
+    var headerHeight = $("#line-1-mobile").height();
+
     $("#line-1-mobile").click(function() {
         //function to toggle height of "#splash-container" in mobile view
         if($("#splash-container").height() >= maxHeight ) {
-            $("#splash-container").animate({height: "20%"});
+            $("#splash-container")
+                .animate({height: headerHeight})
+                .css({background: "#000", transition: "background 0.4s"});
             $("#text-container").fadeOut().hide();
-            $("#splash-container").css({background: "#000"});
             $(".arrow-upward").css({
                 transform: "rotate(180deg)",
-                transition: "transform 0.7s",
-                "padding-top": "0px"
+                transition: "transform 0.7s"
             });
         }else{
             $("#splash-container").animate({ height: "100%" });
             $("#text-container").fadeIn().show();
             $("#splash-container").css({background: ""});
-            $(".arrow-upward").css({
-                transform: "rotate(0deg)",
-                "padding-top": ""
-            });
+            $(".arrow-upward").css({transform: "rotate(0deg)"});
         }
     });
 
