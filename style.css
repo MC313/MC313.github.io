@@ -148,6 +148,10 @@ a.open-overlay:hover {
   z-index: 5;
 }
 
+#click-here {
+  display:none;
+}
+
 /*===== Styles for header (displayed after details page is revealed" =====*/
 #header-container {
   position: absolute;
@@ -208,9 +212,6 @@ a.open-overlay:hover {
 /***** Styles for Elements within first container with image *****/
 #cover {
   background: url(assets/MyHeadshot.JPG) no-repeat center center;
-  /*background-image: url(assets/MyHeadshot.JPG) no-repeat center center;
-  background-repeat: no-repeat;
-  background-position: center;*/
   background-size: cover;
 }
 
@@ -256,7 +257,7 @@ a.open-overlay:hover {
 }
 
 #about-details {
-  font-size: 3vh;
+  font-size: 2.4vh;
 }
 
 #about-details article {
@@ -387,6 +388,10 @@ a.open-overlay:hover {
   }
 
   /***** Styles for 'Click Here' Animation *****/
+  #click-here {
+    display: block;
+  }
+
   #click-here, #expand {
     font-size: 80%;
     color: #e74c3c;
