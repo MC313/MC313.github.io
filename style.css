@@ -5,8 +5,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
   min-width: 320px;
+  width: 100%;
   height: 100%;
   overflow: hidden;
 }
@@ -198,75 +198,6 @@ a.open-overlay:hover {
   font-size: 6vw;
   font-weight: 300;
 }
-
-/***** Styles for 'Click Here' Animation *****/
-#click-here, #expand {
-  font-size: 80%;
-  color: #e74c3c;
-}
-
-#click-here {
-  padding-top: 15%;
-  padding-left: 15%;
-  -moz-animation: clickHere 3.5s infinite;
-  -webkit-animation: clickHere 3.5s infinite;
-          animation: clickHere 3.5s infinite;
-}
-
-@-webkit-keyframes clickHere {
-    0%   {color: #16a085;}
-    25%  {color: #e74c3c;}
-    50%  {color: #16a085;}
-    75%  {color: #e74c3c;}
-    100% {color: #16a085;}
-}
-
-@keyframes clickHere {
-    0%   {color: #16a085;}
-    25%  {color: #e74c3c;}
-    50%  {color: #16a085;}
-    75%  {color: #e74c3c;}
-    100% {color: #16a085;}
-}
-
-#line-1 {
-  display: none;
-}
-
-#line-1 {
-  border-left: 2px solid #fff;
-  border-top: 2px solid #fff;
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  right: 4%;
-  bottom: 6%;
-  z-index: 10;
-  -moz-animation: reduceSplash 3.5s infinite;
-  -webkit-animation: reduceSplash 3.5s infinite;
-          animation: reduceSplash 3.5s infinite;
-}
-
-@-webkit-keyframes reduceSplash {
-    0%   {-webkit-transform: translate(4%, 6%);transform: translate(4%, 6%); border-color: #16a085;}
-    25%  {-webkit-transform: translate(26%, 30%);transform: translate(26%, 30%); border-color: #e74c3c;}
-    50%  {-webkit-transform: translate(4%, 6%);transform: translate(4%, 6%); border-color: #16a085;}
-    75%  {-webkit-transform: translate(26%, 30%);transform: translate(26%, 30%); border-color: #e74c3c;}
-    100% {-webkit-transform: translate(4%, 6%);transform: translate(4%, 6%); border-color: #16a085;}
-}
-
-@keyframes reduceSplash {
-    0%   {-webkit-transform: translate(4%, 6%);transform: translate(4%, 6%); border-color: #16a085;}
-    25%  {-webkit-transform: translate(26%, 30%);transform: translate(26%, 30%); border-color: #e74c3c;}
-    50%  {-webkit-transform: translate(4%, 6%);transform: translate(4%, 6%); border-color: #16a085;}
-    75%  {-webkit-transform: translate(26%, 30%);transform: translate(26%, 30%); border-color: #e74c3c;}
-    100% {-webkit-transform: translate(4%, 6%);transform: translate(4%, 6%); border-color: #16a085;}
-}
-
-#line-1:hover {
-  cursor: pointer;
-  cursor: hand;
-}
 /*===== End of Styles for Elements on Primary Page =====*/
 
 
@@ -274,84 +205,7 @@ a.open-overlay:hover {
 /*===== Styles for Elements on Secondary Page =====*/
 
 
-/***** Styles for 'Click Here' Animation *****/
-#line-2 {
-  display: none;
-}
-
-#line-2 {
-  border-right: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  left: 78%;
-  top: 72%;
-  z-index: 0;
-  -moz-animation: expandSplash 3.5s infinite;
-  -webkit-animation: expandSplash 3.5s infinite;
-  -webkit-animation: expandSplash 3.5s infinite;
-          animation: expandSplash 3.5s infinite;
-}
-
-@-webkit-keyframes expandSplash {
-
-    0%   {-webkit-transform: translate(51%, 46%);transform: translate(51%, 46%); border-color: #16a085;}
-    25%  {-webkit-transform: translate(115%, 75%);transform: translate(115%, 75%); border-color: #e74c3c;}
-    50%  {-webkit-transform: translate(51%, 46%);transform: translate(51%, 46%); border-color: #16a085;}
-    75%  {-webkit-transform: translate(115%, 75%);transform: translate(115%, 75%); border-color: #e74c3c;}
-    100% {-webkit-transform: translate(51%, 46%);transform: translate(51%, 46%); border-color: #16a085;}
-}
-
-@keyframes expandSplash {
-
-    0%   {-webkit-transform: translate(51%, 46%);transform: translate(51%, 46%); border-color: #16a085;}
-    25%  {-webkit-transform: translate(115%, 75%);transform: translate(115%, 75%); border-color: #e74c3c;}
-    50%  {-webkit-transform: translate(51%, 46%);transform: translate(51%, 46%); border-color: #16a085;}
-    75%  {-webkit-transform: translate(115%, 75%);transform: translate(115%, 75%); border-color: #e74c3c;}
-    100% {-webkit-transform: translate(51%, 46%);transform: translate(51%, 46%); border-color: #16a085;}
-}
-
-#expand {
-  padding-top: 15%;
-  padding-right: 15%;
-  -moz-animation: expand 3.5s infinite;
-  -webkit-animation: expand 3.5s infinite;
-  -webkit-animation: expand 3.5s infinite;
-          animation: expand 3.5s infinite;
-}
-
-@-webkit-keyframes expand {
-    0%   {color: #16a085;}
-    25%  {color: #e74c3c;}
-    50%  {color: #16a085;}
-    75%  {color: #e74c3c;}
-    100% {color: #16a085;}
-}
-
-@keyframes expand {
-    0%   {color: #16a085;}
-    25%  {color: #e74c3c;}
-    50%  {color: #16a085;}
-    75%  {color: #e74c3c;}
-    100% {color: #16a085;}
-}
-
-#line-2:hover {
-  cursor: pointer;
-  cursor: hand;
-}
-
-
 /***** Styles for Elements within first container with image *****/
-
-
-#container-1 {
-  /*-webkit-flex: 100%;
-  -ms-flex: 100%;
-  flex: 100%;*/
-}
-
 #cover {
   background: url(assets/MyHeadshot.JPG) no-repeat center center;
   /*background-image: url(assets/MyHeadshot.JPG) no-repeat center center;
@@ -394,17 +248,20 @@ a.open-overlay:hover {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-size: 120%;
+  font-size: 165%;
   color: #1abc9c;
   text-align: center;
   height: 100%;
-  width: 65%;
+  width: 80%;
+}
+
+#about-details {
+  font-size: 3vh;
 }
 
 #about-details article {
-  padding: 2em;
+  padding: 1em;
 }
-
 
 /***** Styles for Attributes within 'Skills' container *****/
 
@@ -414,6 +271,12 @@ a.open-overlay:hover {
 
 #skills-overlay a.close, #skills-details {
   color: #e74c3c;
+}
+
+@media only screen and (min-width: 600px) {
+  #skills-overlay > a.close {
+    height: 15%;
+  }
 }
 
 #skills-details {
@@ -427,12 +290,12 @@ a.open-overlay:hover {
 
 .skill-item {
   position: relative;
-  margin-bottom: 55px;
-  width: 55%;
+  margin-bottom: 45px;
+  width: 80%;
 }
 
 .skill-name {
-  font-size: 145%;
+  font-size: 165%;
 }
 
 .skill-item div {
@@ -481,7 +344,7 @@ a.open-overlay:hover {
 }
 
 #contact-overlay > a.close {
-    height: 25%;
+  height: 15%;
 }
 
 #contact-details {
@@ -518,12 +381,165 @@ a.open-overlay:hover {
 /*===== MEDIA QUERIES =====*/
 
 @media only screen and (min-width: 768px) {
+
+  #header-container {
+    display: none;
+  }
+
+  /***** Styles for 'Click Here' Animation *****/
+  #click-here, #expand {
+    font-size: 80%;
+    color: #e74c3c;
+  }
+
+  #click-here {
+    padding-top: 15%;
+    padding-left: 15%;
+    -moz-animation: clickHere 3.5s infinite;
+    -webkit-animation: clickHere 3.5s infinite;
+    animation: clickHere 3.5s infinite;
+  }
+
+  @-webkit-keyframes clickHere {
+    0%   {color: #16a085;}
+    25%  {color: #e74c3c;}
+    50%  {color: #16a085;}
+    75%  {color: #e74c3c;}
+    100% {color: #16a085;}
+  }
+
+  @keyframes clickHere {
+    0%   {color: #16a085;}
+    25%  {color: #e74c3c;}
+    50%  {color: #16a085;}
+    75%  {color: #e74c3c;}
+    100% {color: #16a085;}
+  }
+
+  /***** Styles for "Click Here" Container Animation *****/
+  #line-1 {
+    border-left: 2px solid #fff;
+    border-top: 2px solid #fff;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 4%;
+    bottom: 6%;
+    z-index: 10;
+    -moz-animation: reduceSplash 3.5s infinite;
+    -webkit-animation: reduceSplash 3.5s infinite;
+    animation: reduceSplash 3.5s infinite;
+  }
+
+  #line-1:hover {
+    cursor: pointer;
+    cursor: hand;
+  }
+
+  @-webkit-keyframes reduceSplash {
+  0%   {-webkit-transform: translate(4%, 6%); border-color: #16a085;}
+  25%  {-webkit-transform: translate(26%, 30%); border-color: #e74c3c;}
+  50%  {-webkit-transform: translate(4%, 6%); border-color: #16a085;}
+  75%  {-webkit-transform: translate(26%, 30%); border-color: #e74c3c;}
+  100% {-webkit-transform: translate(4%, 6%); border-color: #16a085;}
+  }
+
+  @-webkit-keyframes reduceSplash {
+
+    0%   {-webkit-transform: translate(4%, 6%);transform: translate(4%, 6%); border-color: #16a085;}
+    25%  {-webkit-transform: translate(26%, 30%);transform: translate(26%, 30%); border-color: #e74c3c;}
+    50%  {-webkit-transform: translate(4%, 6%);transform: translate(4%, 6%); border-color: #16a085;}
+    75%  {-webkit-transform: translate(26%, 30%);transform: translate(26%, 30%); border-color: #e74c3c;}
+    100% {-webkit-transform: translate(4%, 6%);transform: translate(4%, 6%); border-color: #16a085;}
+  }
+
+  @keyframes reduceSplash {
+
+    0%   {-webkit-transform: translate(4%, 6%);transform: translate(4%, 6%); border-color: #16a085;}
+    25%  {-webkit-transform: translate(26%, 30%);transform: translate(26%, 30%); border-color: #e74c3c;}
+    50%  {-webkit-transform: translate(4%, 6%);transform: translate(4%, 6%); border-color: #16a085;}
+    75%  {-webkit-transform: translate(26%, 30%);transform: translate(26%, 30%); border-color: #e74c3c;}
+    100% {-webkit-transform: translate(4%, 6%);transform: translate(4%, 6%); border-color: #16a085;}
+  }
+
+
+  #line-2 {
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 78%;
+    top: 72%;
+    z-index: 0;
+    -moz-animation: expandSplash 3.5s infinite;
+    -webkit-animation: expandSplash 3.5s infinite;
+    -webkit-animation: expandSplash 3.5s infinite;
+    animation: expandSplash 3.5s infinite;
+  }
+
+  @-webkit-keyframes expandSplash {
+
+    0%   {-webkit-transform: translate(51%, 46%);transform: translate(51%, 46%); border-color: #16a085;}
+    25%  {-webkit-transform: translate(115%, 75%);transform: translate(115%, 75%); border-color: #e74c3c;}
+    50%  {-webkit-transform: translate(51%, 46%);transform: translate(51%, 46%); border-color: #16a085;}
+    75%  {-webkit-transform: translate(115%, 75%);transform: translate(115%, 75%); border-color: #e74c3c;}
+    100% {-webkit-transform: translate(51%, 46%);transform: translate(51%, 46%); border-color: #16a085;}
+  }
+
+  @keyframes expandSplash {
+
+    0%   {-webkit-transform: translate(51%, 46%);transform: translate(51%, 46%); border-color: #16a085;}
+    25%  {-webkit-transform: translate(115%, 75%);transform: translate(115%, 75%); border-color: #e74c3c;}
+    50%  {-webkit-transform: translate(51%, 46%);transform: translate(51%, 46%); border-color: #16a085;}
+    75%  {-webkit-transform: translate(115%, 75%);transform: translate(115%, 75%); border-color: #e74c3c;}
+    100% {-webkit-transform: translate(51%, 46%);transform: translate(51%, 46%); border-color: #16a085;}
+  }
+
+  #expand {
+    padding-top: 15%;
+    padding-right: 15%;
+    -moz-animation: expand 3.5s infinite;
+    -webkit-animation: expand 3.5s infinite;
+    -webkit-animation: expand 3.5s infinite;
+    animation: expand 3.5s infinite;
+  }
+
+  @-webkit-keyframes expand {
+    0%   {color: #16a085;}
+    25%  {color: #e74c3c;}
+    50%  {color: #16a085;}
+    75%  {color: #e74c3c;}
+    100% {color: #16a085;}
+  }
+
+  @keyframes expand {
+    0%   {color: #16a085;}
+    25%  {color: #e74c3c;}
+    50%  {color: #16a085;}
+    75%  {color: #e74c3c;}
+    100% {color: #16a085;}
+  }
+
+  #line-2:hover {
+    cursor: pointer;
+    cursor: hand;
+  }
+  /***** End of Animations *****/
+
+
   #content-container {
     -webkit-flex-flow: row wrap;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
     width: 100%;
     height: 100%;
+  }
+
+  #container-1 {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   #container-1 {
@@ -537,10 +553,10 @@ a.open-overlay:hover {
     -ms-flex: 4 2 60%;
     flex: 4 2 60%;
     height: initial;
+    padding-top: 0px;
   }
 
   #about-details {
-
     font-size: 220%;
   }
 
@@ -562,6 +578,10 @@ a.open-overlay:hover {
     flex: 1 0 40%;
   }
 
+  #contact-overlay > a.close {
+    height: 25%;
+  }
+
   #contact-details {
     -webkit-flex-direction: inherit;
     -ms-flex-direction: inherit;
@@ -572,8 +592,10 @@ a.open-overlay:hover {
   }
 
   #contact-icons a {
-    display: block;
+    display: initial;
   }
+
+
 
 
 
