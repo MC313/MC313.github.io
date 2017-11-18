@@ -1,5 +1,5 @@
 html {
-  height: 100%;
+  height: 100vh;
 }
 
 body {
@@ -7,8 +7,26 @@ body {
   padding: 0;
   width: 100%;
   min-width: 320px;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
+}
+
+.display-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.absolute-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 #splash-container {
@@ -59,9 +77,8 @@ body {
 #click-here {
   padding-top: 15%;
   padding-left: 15%;
-  -moz-animation: clickHere 3.5s infinite;
   -webkit-animation: clickHere 3.5s infinite;
-          animation: clickHere 3.5s infinite;
+  animation: clickHere 3.5s infinite;
 }
 
 @-webkit-keyframes clickHere {
@@ -89,9 +106,8 @@ body {
   right: 4%;
   bottom: 6%;
   z-index: 10;
-  -moz-animation: reduceSplash 3.5s infinite;
   -webkit-animation: reduceSplash 3.5s infinite;
-          animation: reduceSplash 3.5s infinite;
+  animation: reduceSplash 3.5s infinite;
 }
 
 @-webkit-reduceSplash {
@@ -103,7 +119,6 @@ body {
 }
 
 @-webkit-keyframes reduceSplash {
-
     0%   {-webkit-transform: translate(4%, 6%);transform: translate(4%, 6%); border-color: #16a085;}
     25%  {-webkit-transform: translate(26%, 30%);transform: translate(26%, 30%); border-color: #e74c3c;}
     50%  {-webkit-transform: translate(4%, 6%);transform: translate(4%, 6%); border-color: #16a085;}
@@ -112,7 +127,6 @@ body {
 }
 
 @keyframes reduceSplash {
-
     0%   {-webkit-transform: translate(4%, 6%);transform: translate(4%, 6%); border-color: #16a085;}
     25%  {-webkit-transform: translate(26%, 30%);transform: translate(26%, 30%); border-color: #e74c3c;}
     50%  {-webkit-transform: translate(4%, 6%);transform: translate(4%, 6%); border-color: #16a085;}
@@ -135,10 +149,9 @@ body {
   left: 78%;
   top: 72%;
   z-index: 0;
-  -moz-animation: expandSplash 3.5s infinite;
   -webkit-animation: expandSplash 3.5s infinite;
   -webkit-animation: expandSplash 3.5s infinite;
-          animation: expandSplash 3.5s infinite;
+  animation: expandSplash 3.5s infinite;
 }
 
 @-webkit-expandSplash {
@@ -170,10 +183,9 @@ body {
 #expand {
   padding-top: 15%;
   padding-right: 15%;
-  -moz-animation: animation: expand 3.5s ;infinite;
-  -webkit-animation: animation: expand 3.5s ;infinite;
+  -webkit-animation: animation infinite;
   -webkit-animation: expand 3.5s infinite;
-          animation: expand 3.5s infinite;
+  animation: expand 3.5s infinite;
 }
 
 @-webkit-keyframes expand {
@@ -198,62 +210,115 @@ body {
 }
 
 .flex-container {
-  display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
 }
 
-#content-container {
-  -webkit-flex-direction: column;
+.content-wrapper {
+  height: 100vh;
   -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
-  -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   overflow-x: hidden;
 }
 
-#container-1 {
-  -webkit-flex: 1 2 40%;
-  -ms-flex: 1 2 40%;
-  flex: 1 2 40%;
+.content-item {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
-#cover {
+.container-1 {
+  visibility: hidden;
+  display: none;
+}
+
+#site-cover {
   background-image: url(assets/MyHeadshot.JPG);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-#cover #cover-text {
+#site-cover__text {
   display: none;
 }
 
-#cover #arrow-down {
+#site-cover #arrow-down {
   display: none;
 }
-
-#cover > #cover-text {
-  display: none;
-}
-
 
 #cover, #about, #skills, #contact {
   position: relative;
-  display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
-  -webkit-align-items: center;
   -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+/*displayed when section title is clicked*/
+.overlay {
+  position: absolute;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -3;
+}
+
+
+.overlay:target {
+  opacity: 1;
+  z-index: 1;
+}
+
+/*text or icons inside overlay presented when section title is clicked*/
+.details {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  height: 100%;
+  width: 82%;
+  line-height: 1.4;
+}
+
+/*properties for X that closes detail overlay*/
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 25px;
+  font-size: 480%;
+  overflow: hidden;
 }
 
 /*flex item of about content container*/
-#container-2 {
-  -webkit-flex: 4 2 60%;
-  -ms-flex: 4 2 60%;
-  flex: 4 2 60%;
+.container-2 {
+  /* -ms-flex: 4 2 60%;
+  -webkit-box-flex: 4;
+          flex: 4 2 60%; */
 }
 
 #about {
@@ -264,20 +329,18 @@ body {
   color: #1abc9c;
 }
 
-#about-details {
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
+.about-details {
+  height: 100%;
+  padding: 0px 10px;
   font-size: 120%;
   color: #1abc9c;
-  text-align: center;
 }
 
 /*flex item of skills content container */
-#container-3 {
-  -webkit-flex: 4 0 60%;  
-  -ms-flex: 4 0 60%;  
-  flex: 4 0 60%;
+.container-3 {  
+  /* -ms-flex: 4 0 60%;  
+  -webkit-box-flex: 4;  
+          flex: 4 0 60%; */
 }
 
 #skills {
@@ -289,76 +352,77 @@ body {
 }
 
 #skills-details {
-  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-justify-content: center; 
-  -ms-flex-pack: center; 
-  justify-content: center;
+  flex-wrap: wrap; 
 }
 
 .skill-item {
-  -webkit-flex: 1 1 50%;
   -ms-flex: 1 1 50%;
+  -webkit-box-flex: 1;
   flex: 1 1 50%;
-  display: -webkit-flex;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
-  -webkit-flex-direction: column;
   -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   flex-direction: column;
-  position: relative;
-  margin-bottom: 55px;
 }
 
-.skill-name {
+.skill-item__label {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   font-size: 145%;
 }
 
-.skill-item div {
-  position: absolute;
+.skill-item__level {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  position: relative;
   overflow: hidden;
-  height: 100%;
+  height: 30px;
   width: 85%;
   background: #cccccc;
 }
 
-.skill-item div > span {
+.skill-item__level > span {
   position: absolute;
   height: 100%;
   background: #e74c3c;
 }
 
-#css {
+.css {
   width: 77%;
 }
 
-#html {
+.html {
   width: 76%;
 }
 
-#java {
-  width: 43%;
+.javascript {
+  width: 70%;
 }
 
-#mysql {
-  width: 37%;
+.angular1 {
+  width: 65%;
 }
 
-#rails {
+.rails {
   width: 40%;
 }
 
-#linux {
-  width: 63%;
+.angular2 {
+  width: 60%;
 }
 
 
 /*flex item of contact content container */
-#container-4 {
-  -webkit-flex: 1 0 40%;
-  -ms-flex: 1 0 40%;
-  flex: 1;
+.container-4 {
+  /* -ms-flex: 1 0 40%;
+  -webkit-box-flex: 1;
+          flex: 1; */
   background-color: #3498db;
 }
 
@@ -367,9 +431,10 @@ body {
 }
 
 #contact-details {
-  -webkit-flex-direction: column;
   -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
 }
 
 #contact-icons {
@@ -392,7 +457,6 @@ body {
 
 #cover, #about, #skills, #contact {
   -ms-flex-preferred-size: 100%;
-  -webkit-flex-basis: 100%;
           flex-basis: 100%;
 }
 
@@ -413,64 +477,18 @@ a.open-overlay:hover {
   border-bottom: 5px solid #fff;
 }
 
-/*properties for X that closes detail overlay*/
-.close {
-  height: 15%;
-  padding-right: 25px;
-  font-size: 480%;
-  -webkit-align-self: flex-end;
-      -ms-flex-item-align: end;
-          align-self: flex-end;
-}
-
 #about-overlay, #contact-overlay, #skills-overlay {
   background: #fff;
 }
 
-/*displayed when section title is clicked*/
-.overlay {
-  position: absolute;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  z-index: -3;
-}
-
-
-.overlay:target {
-  opacity: 1;
-  z-index: 1;
-}
-
-/*text or icons inside overlay presented when section title is clicked*/
-.details {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 82%;
-  margin: 0 auto;
-  line-height: 1.4;
-}
-
-/*#container-1, #container-2, 
-  #container-3, #container-4 {
+/*.container-1, .container-2, 
+  .container-3, .container-4 {
     -ms-flex-preferred-size: 100% !important;
     -webkit-flex-basis: 100% !important;
             flex-basis: 100% !important;
   }
 
-  #container-1, #container-2 {
+  .container-1, .container-2 {
     -webkit-flex: none !important;
     -ms-flex: none !important;
     flex: none !important;
@@ -482,14 +500,14 @@ a.open-overlay:hover {
     top: 65%;
   }
  
-  #about-details {
+  .about-details {
     text-align: center;
     font-size: 122%;
   }
 }
 
 @media only screen and (min-width: 1310px) {
-  #about-details {
+  .about-details {
     text-align: center;
     font-size: 97%;
   }
@@ -568,14 +586,14 @@ a.open-overlay:hover {
     display: block;
   }
 
-  #container-1, #container-2 {
+  .container-1, .container-2 {
     -webkit-flex: none;
     -ms-flex: none;
     flex: none;
   }
   
-  #container-1, #container-2, 
-  #container-3, #container-4 {
+  .container-1, .container-2, 
+  .container-3, .container-4 {
     -ms-flex-preferred-size: 100%;
     -webkit-flex-basis: 100%;
             flex-basis: 100%;
@@ -593,7 +611,7 @@ a.open-overlay:hover {
     width: 75%;
   }
 
-  #about-details {
+  .about-details {
     font-size: 150%;
   }
 
@@ -646,7 +664,7 @@ a.open-overlay:hover {
     top: 81%;
   }
 
-  /*#about-details {
+  /*.about-details {
     font-size: 130%;
   }*/
 
@@ -701,7 +719,7 @@ a.open-overlay:hover {
     padding-right: 5%;
   }
 
-  #about-details {
+  .about-details {
     font-size: 95%;
   }
   
