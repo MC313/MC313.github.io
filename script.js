@@ -1,9 +1,9 @@
- 
 
 
 
 
- $(document).ready(function(){
+
+$(document).ready(function () {
 
     /*(if (typeof jQuery != "undefined") {
 
@@ -14,39 +14,69 @@
         alert('jQuery is not installed!');
 
     }*/
+    let backButton = document.querySelector('.backward');
+    let buttonIcon = document.querySelector('.button--floating__icon');
+    let contentWrapper = document.querySelector('.content-wrapper');
+    let floatingButton = document.querySelector('.button--floating');
+    let forwardButton = document.querySelector('.forward');
+    let hero = document.querySelector('.hero');
+    let translateValue = 0;
 
-    //get width and height of splash screen before resizing
-    var coverWidth = $("#container-1").outerWidth();
-    var coverHeight = $("#container-1").outerHeight();
 
-    //get width and height of splash screen before resizing
-    // var splashWidth = $("#splash-container").outerWidth();
-    // var splashHeight = $("#splash-container").outerHeight();
 
-    //clicking X icon slides cover page up to reveal details page
-    $("#hideCoverPage").click(function(){
-        console.log("running function .....");
-        $("#splash-container").animate({ height: "0px"})
+
+    // only occurs on mobile view
+    function toggleHero() {
+        if (hero.classList.contains('hide')) {
+            hero.classList.remove('hide');
+            hero.classList.add('show');
+        } else {
+            hero.classList.remove('show');
+            hero.classList.add('hide');
+
+            // reset content when hero is displayed
+            translateContentWrapper(0);
+        }
+    }
+
+    function rotateButtonIcon() {
+        if (buttonIcon.classList.contains('rotate')) {
+            buttonIcon.classList.remove('rotate');
+        } else {
+            buttonIcon.classList.add('rotate');
+        }
+    }
+
+    // Figure out better name for function
+    function translateContentWrapper(value) {
+        contentWrapper.style.transform = `translateX(${value}%)`;
+    }
+
+    floatingButton.addEventListener('click', function (e) {
+        toggleHero();
+        rotateButtonIcon();
     });
 
-    //mouse over function for first arrow icon
-    $("#line-1").click(function() {
-        $("#text-container").hide();
-        $(this).fadeOut(400)
-        $("#splash-container").animate( { width: coverWidth, height: coverHeight } )
-        $("#splash-container").fadeOut(800)
-        $("#line-2").fadeIn(4500)   
+    backButton.addEventListener('click', function (e) {
+        if (translateValue === 0) {
+            return translateValue;
+        } else {
+            translateValue += 33.3;
+        }
+        translateContentWrapper(translateValue);
     });
 
-    $("#line-2").click(function() {
-        $("#text-container").hide();
-        $("#text-container").fadeIn(4500)
-        $("#splash-container").fadeIn()
-        $("#splash-container").animate( { width: '100%', height: '100%' } )
-        $("#line-1").fadeIn(2500)
+    forwardButton.addEventListener('click', function (e) {
+        if (translateValue <= -60) {
+            translateValue = 0;
+        } else {
+            translateValue += -33.3;
+        }
+        translateContentWrapper(translateValue);
     });
 
- }); 
 
- 
-                                                                                             
+
+});
+
+
