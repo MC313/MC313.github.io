@@ -23,16 +23,14 @@ $(document).ready(function () {
     let translateValue = 0;
 
 
-
-
-    // only occurs on mobile view
+    // Handles showing and hiding the hero screen
     function toggleHero() {
-        if (hero.classList.contains('hide')) {
-            hero.classList.remove('hide');
-            hero.classList.add('show');
+        if (hero.classList.contains('hero--hide')) {
+            hero.classList.remove('hero--hide');
+            hero.classList.add('hero--show');
         } else {
-            hero.classList.remove('show');
-            hero.classList.add('hide');
+            hero.classList.remove('hero--show');
+            hero.classList.add('hero--hide');
 
             // reset content when hero is displayed
             translateContentWrapper(0);
@@ -49,10 +47,11 @@ $(document).ready(function () {
 
     // Figure out better name for function
     function translateContentWrapper(value) {
-        contentWrapper.style.transform = `translateX(${value}%)`;
+        contentWrapper.style.transform = 'translateX(${' + value + '}%)';
     }
 
     floatingButton.addEventListener('click', function (e) {
+        console.log('button clicked!')
         toggleHero();
         rotateButtonIcon();
     });

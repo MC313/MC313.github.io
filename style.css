@@ -2,6 +2,8 @@
   --aqua: #1abc9c;
   --orange: #e74c3c;
   --sky-blue: #3498db;
+  /* --poppin-purple:
+  --groovie-grape: */
 }
 
 * {
@@ -102,7 +104,7 @@ Elements Styles
   z-index: 9;
 }
 
-.hero.show {
+.hero.hero--show {
   -webkit-transform: translateY(0px);
       -ms-transform: translateY(0px);
           transform: translateY(0px);
@@ -114,10 +116,10 @@ Elements Styles
   transition: transform 0.4s, -webkit-transform 0.4s ease-in;
 }
 
-.hero.hide {
-  -webkit-transform: translateY(-660px);
-      -ms-transform: translateY(-660px);
-          transform: translateY(-660px);
+.hero.hero--hide {
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
   -webkit-transition: -webkit-transform 0.4s ease-out;
   transition: -webkit-transform 0.4s ease-out;
   -o-transition: transform 0.4s ease-out;
@@ -131,14 +133,14 @@ Elements Styles
   max-height: 140px;
   position: absolute;
   bottom: 0;
-  margin-bottom: 20px;
+  margin-bottom: 90px;
   margin-left: 30px;
-  padding-bottom: 100px;
 }
 
 .text__name {
   color: #16a085;
   font-family: 'Maven Pro', sans-serif;
+  font-weight: 500;
   font-size: 12vw;
 }
 
@@ -154,7 +156,7 @@ Elements Styles
   height: 65px;
   position: fixed;
   bottom: 15px;
-  right: 15px;
+  right: 40px;
   z-index: 10;
   border-radius: 50%;
   border: 0px;
@@ -194,7 +196,7 @@ Elements Styles
 .header {
   width: 100%;
   height: 60px;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 7;
@@ -216,7 +218,7 @@ Elements Styles
 }
 
 .nav-item__link {
-  height: 100%;
+  font-size: 1.6rem;
   transition: background-color  0.4s ease-in;
 }
 
@@ -225,38 +227,30 @@ Elements Styles
   cursor: pointer;
 }
 
+.content {
+  width: 100%;
+  position: relative;
+  z-index: 6;
+  overflow-y: auto;
+}
+
 .content-item {
   width: 100%;
   position: relative;
+  z-index: 6;
 }
 
 #about-overlay, #contact-overlay, #skills-overlay {
   background: #fff;
 }
 
-/*displayed when section title is clicked*/
-.overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
-  z-index: -1;
-  overflow-y: auto;
-  transition: all 0.3s linear;
-}
-
-.overlay:target {
-  opacity: 1;
-  z-index: 8;
-}
 
 /*text or icons inside overlay presented when section title is clicked*/
-.details {
+.details, .content__details {
   align-self: center;
   height: 100%;
-  width: 82%;
+  width: 80%;
+  margin: 0 auto;
   line-height: 1.4;
 }
 
@@ -280,38 +274,32 @@ a.open-overlay {
   margin: 0 auto;
   font-family: 'Maven Pro', sans-serif;
   font-size: 650%;
-  border-bottom: 5px solid transparent;
 }
 
 a.open-overlay:hover {
   cursor: pointer;
-  border-bottom: 5px solid #fff;
 }
 
-#about-overlay a.close {
-  color: #1abc9c;
-}
-
-.about {
-  height: 100%;
+.about, .skills, .contact {
+  height: auto;
   padding: 0px 10px;
 }
 
-.about__title {
+.content__title, .content__text {
+  color: #fff;
+}
+
+.about__title, .content__title {
   font-family: 'Maven Pro', sans-serif;
   font-size: 3.4rem;
   font-weight: 500;
   text-align: center;
 }
 
-.about__text {
+.about__text, .content__text {
   margin-top: 30px;
   font-family: 'Roboto Mono', arial;
   font-size: 1.8rem;
-}
-
-#skills-overlay a.close, #skills-details {
-  color: #e74c3c;
 }
 
 .skills {
@@ -328,18 +316,12 @@ a.open-overlay:hover {
   flex: 1;
   font-size: 1.8rem;
   padding: 5px;
-  color: #e74c3c;
-  color: var(--orange, #e74c3c);
+  color: #fff;
 }
 
 .skill-item__level {
-  color: #e74c3c;
-  color: var(--orange, #e74c3c);
+  color: #fff;
   font-size: 1.4rem;
-}
-
-#contact-overlay > a.close {
-    height: 40%;
 }
 
 #contact-details {
@@ -361,8 +343,4 @@ a.open-overlay:hover {
 
 .social-icon:hover {
   opacity: 1;
-}
-
-#contact-overlay a.close, #contact-details {
-  color: #3498db;
 }

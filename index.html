@@ -14,10 +14,16 @@
 
 
 <body>
-    <section class="hero show">
+    <section class="hero hero--show">
         <article class="hero__text">
             <h1 class="text__name">Malcolm Childs</h1>
             <h2 class="text__title">Web Developer</h2>
+            <p class="text__description">
+                Hey I'm Malcolm science student turned tech professional. I'm a web developer in my hometown of Detroit, MI. In my free time
+                I love teaching other people about web development and I also enjoy discovering and learning new technologies
+                to add to my tool set. When I'm not working on tech stuff I'm networking at meetups, exploring the city for
+                new places to eat, or (mostly likely) hanging out at home listening to music or watching movies.
+            </p>
         </article>
     </section>
     <button class="button--floating">
@@ -33,7 +39,7 @@
             <nav class="absolute-center header__nav">
                 <ul class="fill-space flex flex-row nav-items">
                     <li class="nav-item">
-                        <a herf="#about" class="fill-space absolute-center  nav-item__link">Who I Am</a>
+                        <a herf="#about" class="fill-space absolute-center nav-item__link">Who I Am</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="fill-space absolute-center nav-item__link">What I Do</a>
@@ -48,162 +54,148 @@
             </nav>
         </header>
         <div class="flex flex-row content-wrapper">
-            <section id="about" class="flex absolute-center content-item bg--aqua">
-                <a href="#about-overlay" class="absolute-center fill-space open-overlay">About</a>
-                <div class="overlay" id="about-overlay">
-                    <a href="#about" class="color--aqua close"> &times;</a>
-                    <article class="absolute-center flex-column details about">
-                        <h1 class="color--aqua about__title">Who I Am</h1>
-                        <p class="color--aqua about__text">
-                            Hey I'm Malcolm science student turned tech professional. I'm a web developer in my hometown of Detroit, MI. I Love teaching
-                            other people about web development. I also enjoy discovering and learning new technologies to
-                            add to my tool set. When I'm not working on tech stuff I'm networking at meetups, exploring the
-                            city for new places to eat, or hanging out at listening to music or watching movies.
+            <section id="about" class="absolute-center content bg--aqua">
+                <article class="absolute-center flex-column content__details about">
+                    <h1 class="color--aqua content__title about__title">Who I Am</h1>
+                    <p class="color--aqua content__text about__text">
+                        Hey I'm Malcolm science student turned tech professional. I'm a web developer in my hometown of Detroit, MI. In my free time
+                        I love teaching other people about web development and I also enjoy discovering and learning new
+                        technologies to add to my tool set. When I'm not working on tech stuff I'm networking at meetups,
+                        exploring the city for new places to eat, or (mostly likely) hanging out at home listening to music
+                        or watching movies.
+                    </p>
+                </article>
+            </section>
+            <section id="skills" class="absolute-center content bg--orange">
+                <div class="flex-column content__details skills" style="color: #fff;">
+                    <article class="flex flex-column skill-item">
+                        <h2 class="skill-item__label">
+                            CSS
+                        </h2>
+                        <p class="skill-item__level">
+                            I have over 5 years of experience using css. Within my 5 years I have also had exposure to scss. I have built layouts using
+                            the bootstrap and foundation frameworks. Also I have refactored style sheets and helped to develop
+                            more concise and resuable css by implementing the BEM methodology.
+                        </p>
+                    </article>
+                    <article class="flex flex-column skill-item">
+                        <h2 class="skill-item__label">
+                            HTML
+                        </h2>
+                        <p class="skill-item__level">
+                            I have over 5 years of experience using html. Within my years of using html I have implemented html using server side templating
+                            engines. I have developed html layouts from pdf mockups as well as designed custom wordpress
+                            templates using semantic html.
+                        </p>
+                    </article>
+                    <article class="flex flex-column skill-item">
+                        <h2 class="skill-item__label">
+                            Javascript
+                        </h2>
+                        <p class="skill-item__level">
+                            Years of Experience: 3+ I have used javascript for DOM manipulation. I have an intermediate understanding of javascript design
+                            patterns and also have experience using es6 and es7 features of javascript.
+                        </p>
+                    </article>
+                    <article class="flex flex-column skill-item">
+                        <h2 class="skill-item__label">
+                            AngularJS 1.x
+                        </h2>
+                        <p class="skill-item__level">
+                            Years of Experience: 2+ I have used AngularJS to develop internal facing web applications. I've also used angularjs along
+                            with the Ionic framework to build hybrid mobile appliations that support 10,000+ users.
+                        </p>
+                    </article>
+                    <article class="flex flex-column skill-item">
+                        <h2 class="skill-item__label">
+                            Angular 2
+                        </h2>
+                        <p class="skill-item__level">
+                            Years of Experience: 2+ Using Angular I've developed small to midsize web applications. Do this work I've also gained experience
+                            using Typescript and the RXJS library.
                         </p>
                     </article>
                 </div>
             </section>
-            <section id="skills" class="flex absolute-center content-item bg--orange">
-                <a href="#skills-overlay" class="open-overlay">Skills</a>
-                <div class="flex flex-column overlay" id="skills-overlay">
-                    <a href="#skills" class="close"> &times;</a>
-                    <div class="flex-column skills details">
-                        <article class="flex flex-column skill-item">
-                            <h2 class="skill-item__label">
-                                CSS
-                            </h2>
-                            <p class="skill-item__level">
-                                I have over 4 years of experience using css. Within my 4 years I have also had exposure using scss. I have built layouts
-                                using bootstrap and foundation frameworks. Also I have refactored style sheets and helped
-                                to develop more concise and resuable css by implementing the BEM methodology.
-                            </p>
-                        </article>
-                        <article class="flex flex-column skill-item">
-                            <h2 class="skill-item__label">
-                                HTML
-                            </h2>
-                            <p class="skill-item__level">
-                                I have over 4 years of experience using css. Within my 4 years I have also had exposure using scss. I have built layouts
-                                using bootstrap and foundation frameworks. Also I have refactored style sheets and helped
-                                to develop more concise and resuable css by implementing the BEM methodology.
-                            </p>
-                        </article>
-                        <article class="flex flex-column skill-item">
-                            <h2 class="skill-item__label">
-                                javascript
-                            </h2>
-                            <p class="skill-item__level">
-                                I have over 4 years of experience using css. Within my 4 years I have also had exposure using scss. I have built layouts
-                                using bootstrap and foundation frameworks. Also I have refactored style sheets and helped
-                                to develop more concise and resuable css by implementing the BEM methodology.
-                            </p>
-                        </article>
-                        <article class="flex flex-column skill-item">
-                            <h2 class="skill-item__label">
-                                AngularJS 1.x
-                            </h2>
-                            <p class="skill-item__level">
-                                I have over 4 years of experience using css. Within my 4 years I have also had exposure using scss. I have built layouts
-                                using bootstrap and foundation frameworks. Also I have refactored style sheets and helped
-                                to develop more concise and resuable css by implementing the BEM methodology.
-                            </p>
-                        </article>
-                        <article class="flex flex-column skill-item">
-                            <h2 class="skill-item__label">
-                                Angular 2
-                            </h2>
-                            <p class="skill-item__level">
-                                I have over 4 years of experience using css. Within my 4 years I have also had exposure using scss. I have built layouts
-                                using bootstrap and foundation frameworks. Also I have refactored style sheets and helped
-                                to develop more concise and resuable css by implementing the BEM methodology.
-                            </p>
-                        </article>
-                    </div>
-                </div>
-            </section>
-            <section id="contact" class="flex absolute-center content-item bg--skyblue">
-                <a href="#contact-overlay" class="open-overlay">Contact</a>
-                <div class="overlay" id="contact-overlay">
-                    <a href="#contact" class="close">&times;</a>
-                    <div class="absolute-center details" id="contact-details">
-                        <div id="contact-icons">
-                            <a href="http://on.fb.me/23Cbxq0" target=_blank>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" class="social-icon">
-                                    <title>Facebook</title>
-                                    <description>Link to Malcolm Childs facebook account</description>
-                                    <g fill="none">
-                                        <path d="M0.1 30C0.1 13.4 13.3 0 29.7 0 46 0 59.2 13.4 59.2 30 59.2 46.6 46 60 29.7 60 13.3 60 0.1 46.6 0.1 30ZM0.1 30" class="svg-bg"
-                                            fill="#3498db" />
-                                        <path d="M32.1 46.3L32.1 30 36.6 30 37.2 24.4 32.1 24.4 32.1 21.6C32.1 20.1 32.3 19.3 34.4 19.3L37.1 19.3 37.1 13.7 32.7 13.7C27.4 13.7 25.5 16.4 25.5 21L25.5 24.4 22.2 24.4 22.2 30 25.5 30 25.5 46.3 32.1 46.3ZM32.1 46.3"
-                                            class="icon-logo" fill="#fff" />
-                                        <path d="M59.2 30C59.2 46.6 46 60 29.7 60 23.6 60 18 58.2 13.3 55L47.2 5.8C54.5 11.3 59.2 20.1 59.2 30ZM59.2 30" fill-opacity="0.08"
-                                        />
-                                    </g>
-                                </svg>
-                            </a>
-                            <a href="http://bit.ly/1nWPMAX" target=_blank>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" class="social-icon">
-                                    <title>Twitter</title>
-                                    <description>Link to Malcolm Childs twitter account</description>
-                                    <g fill="none">
-                                        <path d="M0 30C0 13.4 13.5 0 30 0 46.6 0 60.1 13.4 60.1 30 60.1 46.6 46.6 60 30 60 13.5 60 0 46.6 0 30ZM0 30" class="svg-bg"
-                                            fill="#3498db" />
-                                        <path d="M29.3 23.9L29.4 24.9 28.3 24.8C24.5 24.3 21.2 22.7 18.3 19.9L16.9 18.5 16.6 19.5C15.8 21.8 16.3 24.2 17.9 25.8 18.7 26.7 18.5 26.8 17.1 26.3 16.6 26.1 16.1 26 16.1 26 16 26.2 16.5 28.1 16.9 28.9 17.4 29.9 18.5 31 19.7 31.6L20.8 32.1 19.5 32.1C18.4 32.1 18.3 32.1 18.5 32.6 18.9 34 20.5 35.4 22.4 36L23.7 36.5 22.5 37.2C20.9 38.1 18.9 38.7 16.9 38.7 16 38.8 15.2 38.8 15.2 38.9 15.2 39.1 17.8 40.3 19.2 40.8 23.7 42.1 29 41.6 33 39.2 35.8 37.5 38.7 34.2 40 31 40.7 29.3 41.4 26.1 41.4 24.6 41.4 23.7 41.5 23.5 42.7 22.4 43.4 21.7 44 20.9 44.1 20.7 44.3 20.3 44.3 20.3 43.3 20.7 41.5 21.3 41.2 21.2 42.1 20.3 42.8 19.6 43.5 18.4 43.5 18 43.5 18 43.2 18.1 42.9 18.3 42.5 18.5 41.6 18.8 41 19L39.9 19.3 38.8 18.6C38.3 18.3 37.5 17.8 37.1 17.7 36 17.4 34.4 17.4 33.4 17.8 30.8 18.7 29.1 21.2 29.3 23.9ZM29.3 23.9"
-                                            class="icon-logo" fill="#fff" />
-                                        <path d="M60.1 30C60.1 46.6 46.6 60 30 60 23.9 60 18.2 58.2 13.4 55L47.8 5.8C55.3 11.3 60.1 20.1 60.1 30ZM60.1 30" fill-opacity="0.08"
-                                        />
-                                    </g>
-                                </svg>
-                            </a>
-                            <!-- <a href="#" target=_blank>
+            <section id="contact" class="absolute-center content bg--skyblue">
+                <div class="absolute-center content__details contact">
+                    <div id="contact-icons">
+                        <a href="http://on.fb.me/23Cbxq0" target=_blank>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" class="social-icon">
+                                <title>Facebook</title>
+                                <description>Link to Malcolm Childs facebook account</description>
+                                <g fill="none">
+                                    <path d="M0.1 30C0.1 13.4 13.3 0 29.7 0 46 0 59.2 13.4 59.2 30 59.2 46.6 46 60 29.7 60 13.3 60 0.1 46.6 0.1 30ZM0.1 30" class="svg-bg"
+                                        fill="#3498db" />
+                                    <path d="M32.1 46.3L32.1 30 36.6 30 37.2 24.4 32.1 24.4 32.1 21.6C32.1 20.1 32.3 19.3 34.4 19.3L37.1 19.3 37.1 13.7 32.7 13.7C27.4 13.7 25.5 16.4 25.5 21L25.5 24.4 22.2 24.4 22.2 30 25.5 30 25.5 46.3 32.1 46.3ZM32.1 46.3"
+                                        class="icon-logo" fill="#fff" />
+                                    <path d="M59.2 30C59.2 46.6 46 60 29.7 60 23.6 60 18 58.2 13.3 55L47.2 5.8C54.5 11.3 59.2 20.1 59.2 30ZM59.2 30" fill-opacity="0.08"
+                                    />
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="http://bit.ly/1nWPMAX" target=_blank>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" class="social-icon">
+                                <title>Twitter</title>
+                                <description>Link to Malcolm Childs twitter account</description>
+                                <g fill="none">
+                                    <path d="M0 30C0 13.4 13.5 0 30 0 46.6 0 60.1 13.4 60.1 30 60.1 46.6 46.6 60 30 60 13.5 60 0 46.6 0 30ZM0 30" class="svg-bg"
+                                        fill="#3498db" />
+                                    <path d="M29.3 23.9L29.4 24.9 28.3 24.8C24.5 24.3 21.2 22.7 18.3 19.9L16.9 18.5 16.6 19.5C15.8 21.8 16.3 24.2 17.9 25.8 18.7 26.7 18.5 26.8 17.1 26.3 16.6 26.1 16.1 26 16.1 26 16 26.2 16.5 28.1 16.9 28.9 17.4 29.9 18.5 31 19.7 31.6L20.8 32.1 19.5 32.1C18.4 32.1 18.3 32.1 18.5 32.6 18.9 34 20.5 35.4 22.4 36L23.7 36.5 22.5 37.2C20.9 38.1 18.9 38.7 16.9 38.7 16 38.8 15.2 38.8 15.2 38.9 15.2 39.1 17.8 40.3 19.2 40.8 23.7 42.1 29 41.6 33 39.2 35.8 37.5 38.7 34.2 40 31 40.7 29.3 41.4 26.1 41.4 24.6 41.4 23.7 41.5 23.5 42.7 22.4 43.4 21.7 44 20.9 44.1 20.7 44.3 20.3 44.3 20.3 43.3 20.7 41.5 21.3 41.2 21.2 42.1 20.3 42.8 19.6 43.5 18.4 43.5 18 43.5 18 43.2 18.1 42.9 18.3 42.5 18.5 41.6 18.8 41 19L39.9 19.3 38.8 18.6C38.3 18.3 37.5 17.8 37.1 17.7 36 17.4 34.4 17.4 33.4 17.8 30.8 18.7 29.1 21.2 29.3 23.9ZM29.3 23.9"
+                                        class="icon-logo" fill="#fff" />
+                                    <path d="M60.1 30C60.1 46.6 46.6 60 30 60 23.9 60 18.2 58.2 13.4 55L47.8 5.8C55.3 11.3 60.1 20.1 60.1 30ZM60.1 30" fill-opacity="0.08"
+                                    />
+                                </g>
+                            </svg>
+                        </a>
+                        <!-- <a href="#" target=_blank>
                                         <img class="social-icon" alt="Malcolm Childs github" src="assets/instagramTrans.png">
                                     </a> -->
-                            <a href="http://bit.ly/1nxGACs" target=_blank>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" class="social-icon">
-                                    <title>LinkedIN</title>
-                                    <description>Link to Malcolm Childs linkedin account</description>
-                                    <g fill="none">
-                                        <path d="M0.4 30C0.4 13.4 13.7 0 30 0 46.3 0 59.6 13.4 59.6 30 59.6 46.6 46.3 60 30 60 13.7 60 0.4 46.6 0.4 30ZM0.4 30" class="svg-bg"
-                                            fill="#3498db" />
-                                        <path d="M22.5 23.7L15.8 23.7 15.8 44.1 22.5 44.1 22.5 23.7ZM22.5 23.7" class="icon" fill="#fff" class="a" />
-                                        <path d="M22.9 17.4C22.9 15.4 21.5 13.9 19.2 13.9 16.9 13.9 15.4 15.4 15.4 17.4 15.4 19.4 16.8 20.9 19.1 20.9L19.1 20.9C21.5 20.9 22.9 19.4 22.9 17.4ZM22.9 17.4"
-                                            class="icon" fill="#fff" />
-                                        <path d="M46.6 32.4C46.6 26.2 43.3 23.2 38.9 23.2 35.3 23.2 33.7 25.2 32.9 26.6L32.9 23.7 26.2 23.7C26.3 25.6 26.2 44.1 26.2 44.1L32.9 44.1 32.9 32.7C32.9 32.1 32.9 31.5 33.1 31.1 33.6 29.9 34.7 28.6 36.5 28.6 38.9 28.6 39.9 30.5 39.9 33.2L39.9 44.1 46.6 44.1 46.6 32.4ZM46.6 32.4"
-                                            class="icon-logo" fill="#fff" />
-                                        <path d="M59.6 30C59.6 46.6 46.3 60 30 60 23.9 60 18.3 58.2 13.6 55L47.5 5.8C54.8 11.3 59.6 20.1 59.6 30ZM59.6 30" fill-opacity="0.08"
-                                        />
-                                    </g>
-                                </svg>
-                            </a>
-                            <a href="http://bit.ly/1SuQSz5" target=_blank>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" class="social-icon">
-                                    <title>Github</title>
-                                    <description>link to Malcolm Childs github account</description>
-                                    <g fill="none">
-                                        <path d="M0.3 30C0.3 13.4 13.6 0 29.9 0 46.2 0 59.4 13.4 59.4 30 59.4 46.6 46.2 60 29.9 60 13.6 60 0.3 46.6 0.3 30ZM0.3 30"
-                                            class="svg-bg" fill="#3498db" />
-                                        <path d="M18.2 31.9C19.6 34.5 22.3 36 26.8 36.4 26.2 36.9 25.4 37.9 25.3 38.9 24.5 39.5 22.8 39.6 21.6 39.2 19.8 38.7 19.1 35.2 16.5 35.7 15.9 35.8 16 36.2 16.5 36.5 17.3 37 18.1 37.7 18.7 39 19.1 40.1 20.1 42 23.1 42 24.2 42 25.1 41.9 25.1 41.9 25.1 41.9 25.1 44.6 25.1 45.7 25.1 46.9 23.5 47.2 23.5 47.8 23.5 48.1 24 48.1 24.4 48.1 25.3 48.1 27.1 47.4 27.1 46.1 27.1 45.1 27.1 41.7 27.1 41.1 27.1 39.8 27.8 39.4 27.8 39.4 27.8 39.4 27.9 46.3 27.7 47.2 27.4 48.3 26.8 48.2 26.8 48.7 26.8 49.4 29 48.9 29.7 47.3 30.3 46 30.1 39.2 30.1 39.2L30.7 39.2C30.7 39.2 30.7 42.3 30.7 43.7 30.6 45.2 30.5 47.1 31.4 48 32 48.5 33.9 49.6 33.9 48.6 33.9 48.1 32.8 47.6 32.8 46.2L32.8 39.5C33.7 39.5 33.5 41.7 33.5 41.7L33.6 45.8C33.6 45.8 33.4 47.3 35.2 47.9 35.9 48.1 37.2 48.2 37.3 47.8 37.3 47.4 35.6 46.9 35.6 45.7 35.6 45 35.7 44.6 35.7 41.5 35.7 38.5 35.2 37.3 33.8 36.4 38.2 36 41 34.9 42.3 31.9 42.4 31.9 42.9 30.6 42.8 30.6 43.1 29.5 43.3 28.2 43.3 26.6 43.3 22.4 41.3 20.9 40.9 20.2 41.5 17 40.8 15.6 40.5 15.1 39.4 14.7 36.5 16.1 35 17.1 32.4 16.4 27.1 16.5 25.1 17.3 21.4 14.7 19.4 15.1 19.4 15.1 19.4 15.1 18.2 17.4 19.1 20.7 17.9 22.2 17 23.3 17 26.2 17 27.8 17.2 29.3 17.6 30.6 17.6 30.6 18.2 31.9 18.2 31.9ZM18.2 31.9"
-                                            class="icon-logo" fill="#fff" />
-                                        <path d="M59.4 30C59.4 46.6 46.2 60 29.9 60 23.8 60 18.2 58.2 13.5 55L47.4 5.8C54.7 11.3 59.4 20.1 59.4 30ZM59.4 30" fill-opacity="0.08"
-                                        />
-                                    </g>
-                                </svg>
-                            </a>
-                            <a href="mailto:me@malcolmchilds.me">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" class="social-icon">
-                                    <title> Mail</title>
-                                    <description>email address mchilds0@gmail.com</description>
-                                    <g fill="none">
-                                        <path d="M0.2 30C0.2 13.4 13.5 0 29.8 0 46.1 0 59.3 13.4 59.3 30 59.3 46.6 46.1 60 29.8 60 13.5 60 0.2 46.6 0.2 30ZM0.2 30"
-                                            class="svg-bg" fill="#3498db" />
-                                        <path d="M35 31.6L47.2 40.6 47.2 20 35 31.6ZM13.8 20L13.8 40.6 25.9 31.6 13.8 20ZM30.5 36L27.6 33.2 13.8 42 47.2 42 33.4 33.2 30.5 36ZM46.2 20L14.8 20 30.5 32.5 46.2 20ZM46.2 20"
-                                            class="icon-logo" fill="#fff" />
-                                        <path d="M59.3 30C59.3 46.6 46.1 60 29.8 60 23.7 60 18.1 58.2 13.4 55L47.3 5.8C54.6 11.3 59.3 20.1 59.3 30ZM59.3 30" fill-opacity="0.08"
-                                        />
-                                    </g>
-                                </svg>
-                            </a>
-                        </div>
+                        <a href="http://bit.ly/1nxGACs" target=_blank>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" class="social-icon">
+                                <title>LinkedIN</title>
+                                <description>Link to Malcolm Childs linkedin account</description>
+                                <g fill="none">
+                                    <path d="M0.4 30C0.4 13.4 13.7 0 30 0 46.3 0 59.6 13.4 59.6 30 59.6 46.6 46.3 60 30 60 13.7 60 0.4 46.6 0.4 30ZM0.4 30" class="svg-bg"
+                                        fill="#3498db" />
+                                    <path d="M22.5 23.7L15.8 23.7 15.8 44.1 22.5 44.1 22.5 23.7ZM22.5 23.7" class="icon" fill="#fff" class="a" />
+                                    <path d="M22.9 17.4C22.9 15.4 21.5 13.9 19.2 13.9 16.9 13.9 15.4 15.4 15.4 17.4 15.4 19.4 16.8 20.9 19.1 20.9L19.1 20.9C21.5 20.9 22.9 19.4 22.9 17.4ZM22.9 17.4"
+                                        class="icon" fill="#fff" />
+                                    <path d="M46.6 32.4C46.6 26.2 43.3 23.2 38.9 23.2 35.3 23.2 33.7 25.2 32.9 26.6L32.9 23.7 26.2 23.7C26.3 25.6 26.2 44.1 26.2 44.1L32.9 44.1 32.9 32.7C32.9 32.1 32.9 31.5 33.1 31.1 33.6 29.9 34.7 28.6 36.5 28.6 38.9 28.6 39.9 30.5 39.9 33.2L39.9 44.1 46.6 44.1 46.6 32.4ZM46.6 32.4"
+                                        class="icon-logo" fill="#fff" />
+                                    <path d="M59.6 30C59.6 46.6 46.3 60 30 60 23.9 60 18.3 58.2 13.6 55L47.5 5.8C54.8 11.3 59.6 20.1 59.6 30ZM59.6 30" fill-opacity="0.08"
+                                    />
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="http://bit.ly/1SuQSz5" target=_blank>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" class="social-icon">
+                                <title>Github</title>
+                                <description>link to Malcolm Childs github account</description>
+                                <g fill="none">
+                                    <path d="M0.3 30C0.3 13.4 13.6 0 29.9 0 46.2 0 59.4 13.4 59.4 30 59.4 46.6 46.2 60 29.9 60 13.6 60 0.3 46.6 0.3 30ZM0.3 30"
+                                        class="svg-bg" fill="#3498db" />
+                                    <path d="M18.2 31.9C19.6 34.5 22.3 36 26.8 36.4 26.2 36.9 25.4 37.9 25.3 38.9 24.5 39.5 22.8 39.6 21.6 39.2 19.8 38.7 19.1 35.2 16.5 35.7 15.9 35.8 16 36.2 16.5 36.5 17.3 37 18.1 37.7 18.7 39 19.1 40.1 20.1 42 23.1 42 24.2 42 25.1 41.9 25.1 41.9 25.1 41.9 25.1 44.6 25.1 45.7 25.1 46.9 23.5 47.2 23.5 47.8 23.5 48.1 24 48.1 24.4 48.1 25.3 48.1 27.1 47.4 27.1 46.1 27.1 45.1 27.1 41.7 27.1 41.1 27.1 39.8 27.8 39.4 27.8 39.4 27.8 39.4 27.9 46.3 27.7 47.2 27.4 48.3 26.8 48.2 26.8 48.7 26.8 49.4 29 48.9 29.7 47.3 30.3 46 30.1 39.2 30.1 39.2L30.7 39.2C30.7 39.2 30.7 42.3 30.7 43.7 30.6 45.2 30.5 47.1 31.4 48 32 48.5 33.9 49.6 33.9 48.6 33.9 48.1 32.8 47.6 32.8 46.2L32.8 39.5C33.7 39.5 33.5 41.7 33.5 41.7L33.6 45.8C33.6 45.8 33.4 47.3 35.2 47.9 35.9 48.1 37.2 48.2 37.3 47.8 37.3 47.4 35.6 46.9 35.6 45.7 35.6 45 35.7 44.6 35.7 41.5 35.7 38.5 35.2 37.3 33.8 36.4 38.2 36 41 34.9 42.3 31.9 42.4 31.9 42.9 30.6 42.8 30.6 43.1 29.5 43.3 28.2 43.3 26.6 43.3 22.4 41.3 20.9 40.9 20.2 41.5 17 40.8 15.6 40.5 15.1 39.4 14.7 36.5 16.1 35 17.1 32.4 16.4 27.1 16.5 25.1 17.3 21.4 14.7 19.4 15.1 19.4 15.1 19.4 15.1 18.2 17.4 19.1 20.7 17.9 22.2 17 23.3 17 26.2 17 27.8 17.2 29.3 17.6 30.6 17.6 30.6 18.2 31.9 18.2 31.9ZM18.2 31.9"
+                                        class="icon-logo" fill="#fff" />
+                                    <path d="M59.4 30C59.4 46.6 46.2 60 29.9 60 23.8 60 18.2 58.2 13.5 55L47.4 5.8C54.7 11.3 59.4 20.1 59.4 30ZM59.4 30" fill-opacity="0.08"
+                                    />
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="mailto:me@malcolmchilds.me">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" class="social-icon">
+                                <title> Mail</title>
+                                <description>email address mchilds0@gmail.com</description>
+                                <g fill="none">
+                                    <path d="M0.2 30C0.2 13.4 13.5 0 29.8 0 46.1 0 59.3 13.4 59.3 30 59.3 46.6 46.1 60 29.8 60 13.5 60 0.2 46.6 0.2 30ZM0.2 30"
+                                        class="svg-bg" fill="#3498db" />
+                                    <path d="M35 31.6L47.2 40.6 47.2 20 35 31.6ZM13.8 20L13.8 40.6 25.9 31.6 13.8 20ZM30.5 36L27.6 33.2 13.8 42 47.2 42 33.4 33.2 30.5 36ZM46.2 20L14.8 20 30.5 32.5 46.2 20ZM46.2 20"
+                                        class="icon-logo" fill="#fff" />
+                                    <path d="M59.3 30C59.3 46.6 46.1 60 29.8 60 23.7 60 18.1 58.2 13.4 55L47.3 5.8C54.6 11.3 59.3 20.1 59.3 30ZM59.3 30" fill-opacity="0.08"
+                                    />
+                                </g>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </section>
