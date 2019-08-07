@@ -1,46 +1,68 @@
- 
+const app = (function() {
 
+    let activeSection;
+    const body = document.querySelector('body');
+    const nav = document.querySelector('.js-nav');
+    const navButton = document.querySelector('.js-nav-button');
+    const previousOffset = []; 
+    let timeoutId;   
 
+    const animateNavItemBorder = (target) => {
+        const navBorder = document.querySelector('.js-nav-item--active__border');
+        previousOffset[0] = target.offsetLeft;
+        const currentOffset = target.offseLeft >= previousOffset[0] ? -target.offsetLeft : target.offsetLeft;
+        navBorder.style.transform = `translateX(${currentOffset}px)`;
+    }
 
+    const setActiveNavItem = (target) => {
+        const navItems = document.querySelectorAll('.js-nav-item');
+        navItems.forEach((navItem) => navItem.classList.remove('nav-item--active'));
+        target.classList.add('nav-item--active');
+    }
 
- $(document).ready(function(){
+    const setActiveClass = (target) => {
+        const sections = document.querySelectorAll('.js-section');
+        sections.forEach((section) => section.classList.remove('section--active'));
+        target.classList.add('section--active');
+    }
 
-    /*(if (typeof jQuery != "undefined") {
+    const setActiveSectionElement = (target) => {
+        const navItemText = target.getElementsByTagName('p')[0];
+        activeSection = document.getElementById(navItemText.dataset.id);
+    }
+    
+    const scrollToSection = (sectionElement) => {
+        sectionElement.scrollIntoView({
+            behavior: 'smooth', 
+            inline: 'center'
+        });
+    }
 
-    	alert('jQuery is installed!');
+    const toggleNavMenu = () => {
+        if (body.classList.contains('nav--visible')) {
+            body.classList.add('nav--hidden');
+            body.classList.remove('nav--visible');
+        } else {
+            body.classList.add('nav--visible');
+            body.classList.remove('nav--hidden');
+        }
+    }
 
-       } else {
-        
-        alert('jQuery is not installed!');
+    const handleNavItemClick = ({target}) => {
+        const currentEl = target.classList.contains('.js-nav-item') ? target : target.parentNode;
+        setActiveSectionElement(currentEl);
+        setActiveNavItem(currentEl);
+        animateNavItemBorder(currentEl);
+        scrollToSection(activeSection);
+        setActiveClass(activeSection);
+    }
 
-    }*/
+    const run = () => {
+        navButton.addEventListener('click', toggleNavMenu);
+        nav.addEventListener('click', handleNavItemClick);
+    }
 
-    //get width and height of splash screen before resizing
-    var coverWidth = $("#container-1").outerWidth();
-    var coverHeight = $("#container-1").outerHeight();
+    return { run }
+})();
 
-    //get width and height of splash screen before resizing
-    var splashWidth = $("#splash-container").outerWidth();
-    var splashHeight = $("#splash-container").outerHeight();
-
-    //mouse over function for first arrow icon
-    $("#line-1").click(function() {
-        $("#text-container").hide();
-        $(this).fadeOut(400)
-        $("#splash-container").animate( { width: coverWidth, height: coverHeight } )
-        $("#splash-container").fadeOut(800)
-        $("#line-2").fadeIn(4500)   
-    });
-
-    $("#line-2").click(function() {
-        $("#text-container").hide();
-        $("#text-container").fadeIn(4500)
-        $("#splash-container").fadeIn()
-        $("#splash-container").animate( { width: '100%', height: '100%' } )
-        $("#line-1").fadeIn(2500)
-    });
-
- }); 
-
- 
-                                                                                             
+document.addEventListener('DOMContentLoaded', app.run());

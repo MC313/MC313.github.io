@@ -1,0 +1,4 @@
+- Set border animation to use % instead of px
+- Set fixed position on active section element 
+  without loosing scroll animation
+- Add links to contact information
