@@ -248,8 +248,8 @@ section {
 */
 .button--nav {
 	position: absolute;
-	right: 0px;
-	bottom: 0px;
+	top: 25px;
+	right: 30px;
 	width: 75px;
 	height: 75px;
 	z-index: 10;
@@ -262,28 +262,16 @@ section {
 	background-color: #1d1e22;
 	background-color: var(--navBG);
 	color: #fff;
-	transform: translateZ(0%);
-	will-change: transform;
 }
 
 .button--nav:hover {
 	cursor: pointer;
 }
 
-.nav--visible .button--nav {
-	transform: translate(-100%, -480%);
-	transition: transform 0.4s 0.2s ease;
-}
-
-.nav--hidden .button--nav {
-	transform: translate(-100%, -65px);
-	transition: transform 0.2s ease;
-}
-
 .icon-wrapper {
 	height: 200%;
 	padding: 14px 0px;
-	transition: transform 0.4s 0.2s ease;
+	transition: transform 0.4s ease;
 }
 
 .nav--visible .icon-wrapper {
@@ -386,18 +374,6 @@ section {
 		display: block;
 		font-size: 1.2rem;
 		line-height: 4;
-	}
-
-
-	/*
-    =============================================
-    ||                                         ||
-    ||        Navigation Button Styles         ||
-    ||                                         ||
-    =============================================
-    */
-	.nav--visible .button--nav {
-		transform: translate(-100%, -280%);
 	}
 
 	/*
